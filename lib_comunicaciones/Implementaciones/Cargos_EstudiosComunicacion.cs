@@ -5,7 +5,7 @@ namespace lib_comunicaciones.Implementaciones
     public class Cargos_EstudiosComunicacion : ICargos_EstudiosComunicacion
     {
         private Comunicaciones? comunicaciones = null;
-        private string? Nombre = "Cargos_Cargos_Estudios";
+        private string? Nombre = "Cargos_Estudios";
 
         public Cargos_EstudiosComunicacion()
         {
