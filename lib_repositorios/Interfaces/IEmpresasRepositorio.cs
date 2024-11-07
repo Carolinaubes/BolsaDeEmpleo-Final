@@ -3,13 +3,13 @@ using System.Linq.Expressions;
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IAccionesRepositorio
+    public interface IEmpresasRepositorio
     {
         void Configurar(string string_conexion);
-        List<Acciones> Listar();
-        List<Acciones> Buscar(Expression<Func<Acciones, bool>> condiciones);
-        Acciones Guardar(Acciones entidad);
-        Acciones Modificar(Acciones entidad);
-        Acciones Borrar(Acciones entidad);
+        List<Empresas> Listar();
+        List<Empresas> Buscar(Expression<Func<Empresas, bool>> condiciones);
+        Empresas Guardar(Empresas entidad);
+        Empresas Modificar(Empresas entidad);
+        Empresas Borrar(Empresas entidad);
     }
 }
