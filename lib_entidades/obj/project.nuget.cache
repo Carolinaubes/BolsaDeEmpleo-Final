@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "myZa7U/tpFI=",
   "success": true,
   "projectFilePath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+=======
+  "dgSpecHash": "laQf8Og4C54=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+>>>>>>> 37200c610e3db36fccd61bf7a3a5c9523a894e89
   "expectedPackageFiles": [],
   "logs": []
 }
