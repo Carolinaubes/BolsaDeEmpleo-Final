@@ -4,5 +4,12 @@
   "success": true,
   "projectFilePath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\BolsaDeEmpleoFINAL\\lib_entidades\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

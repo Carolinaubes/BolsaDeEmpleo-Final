@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lib_presentaciones.Implementanciones
+namespace lib_presentaciones.Interfaces
 {
-    internal class CargosPresentaciones
+    internal class IRolesPresentacion
     {
     }
 }
