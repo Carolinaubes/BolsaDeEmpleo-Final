@@ -1,0 +1,3 @@
+{
+  "ConectionString": "server=....;database=BolsaDeEmpleo;Integrated Security=True;TrustServerCertificate=true;"
+}
