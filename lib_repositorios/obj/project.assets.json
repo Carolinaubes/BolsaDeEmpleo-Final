@@ -1,45 +1,31 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
-      "lib_entidades/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/lib_entidades.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/lib_entidades.dll": {}
-        }
-      }
-    }
+    "net8.0": {}
   },
-  "libraries": {
-    "lib_entidades/1.0.0": {
-      "type": "project",
-      "path": "../lib_entidades/lib_entidades.csproj",
-      "msbuildProject": "../lib_entidades/lib_entidades.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net8.0": [
-      "lib_entidades >= 1.0.0"
-    ]
+    "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Janus\\.nuget\\packages\\": {}
+    "C:\\Users\\sofia\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BolsaDeEmpleoFINAL\\lib_repositorios\\lib_repositorios.csproj",
+      "projectUniqueName": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj",
       "projectName": "lib_repositorios",
-      "projectPath": "D:\\BolsaDeEmpleoFINAL\\lib_repositorios\\lib_repositorios.csproj",
-      "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-      "outputPath": "D:\\BolsaDeEmpleoFINAL\\lib_repositorios\\obj\\",
+      "projectPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj",
+      "packagesPath": "C:\\Users\\sofia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_repositorios\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sofia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,11 +39,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "D:\\BolsaDeEmpleoFINAL\\lib_entidades\\lib_entidades.csproj": {
-              "projectPath": "D:\\BolsaDeEmpleoFINAL\\lib_entidades\\lib_entidades.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -90,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
