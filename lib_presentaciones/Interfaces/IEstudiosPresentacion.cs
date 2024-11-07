@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using lib_entidades.Modelos;
 
 namespace lib_presentaciones.Interfaces
 {
-    internal class Estudios
+    public interface IEstudiosPresentacion
     {
+        Task<List<Estudios>> Listar();
+        Task<List<Estudios>> Buscar(Estudios entidad, string tipo);
+        Task<Estudios> Guardar(Estudios entidad);
+        Task<Estudios> Modificar(Estudios entidad);
+        Task<Estudios> Borrar(Estudios entidad);
     }
 }
