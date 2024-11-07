@@ -1,20 +1,35 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {}
+=======
+    "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {}
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
   },
   "projects": {
-    "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+    "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+        "projectUniqueName": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
         "projectName": "lib_entidades",
+<<<<<<< HEAD
         "projectPath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
         "packagesPath": "C:\\Users\\Emune\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\obj\\",
+=======
+        "projectPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+        "packagesPath": "C:\\Users\\sofia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\obj\\",
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Emune\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\sofia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +37,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "9bE27svBzgM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj",
+=======
+  "dgSpecHash": "fBTMtqJWutY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj",
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="lib_entidades.Modelos.Acciones">
+    <Position X="13.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelos\Acciones.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Auditorias">
+    <Position X="11.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIAAAAAAAAAAAAAAAAAAAAAQAAgAEEAAAAAAA=</HashCode>
+      <FileName>Modelos\Auditorias.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Accion" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Cargos">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelos\Cargos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Cargos_Estudios">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAgAAAAAAAAACAAAAAAAAAAAQAAAAAAAAACAAA=</HashCode>
+      <FileName>Modelos\Cargos_Estudios.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Cargo" />
+      <Property Name="_Estudio" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Empresas">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAAAACIAgAAAAAAAAQAAAAAABAAAAAA=</HashCode>
+      <FileName>Modelos\Empresas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Rol" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Estudios">
+    <Position X="8.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAIQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelos\Estudios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Personas_Estudios">
+    <Position X="8.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAIAAACAAA=</HashCode>
+      <FileName>Modelos\Personas_Estudios.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Estudio" />
+      <Property Name="_Persona" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Personas">
+    <Position X="6.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAIAACIAgAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelos\Personas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Rol" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Postulaciones">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAIAAAAAAEAABAAAAAQAAAAAIAAEAAAA=</HashCode>
+      <FileName>Modelos\Postulaciones.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Personas" />
+      <Property Name="_Vacantes" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Vacantes">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAAAAAAACEAAAAAAgAAAQAAAIAAAAAAAAA=</HashCode>
+      <FileName>Modelos\Vacantes.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Cargo" />
+      <Property Name="_Empresa" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="lib_entidades.Modelos.Roles">
+    <Position X="1.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelos\Roles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

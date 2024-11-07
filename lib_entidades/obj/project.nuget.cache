@@ -1,15 +1,25 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "myZa7U/tpFI=",
   "success": true,
   "projectFilePath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+=======
+  "dgSpecHash": "cuRRZ5CwIAM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
   "expectedPackageFiles": [],
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Problem reading the cache file C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problem reading the cache file D:\\BolsaDeEmpleoFINAL\\lib_entidades\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
     }
   ]
 }
