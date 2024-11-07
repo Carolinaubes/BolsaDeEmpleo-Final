@@ -28,6 +28,7 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
+<<<<<<< HEAD
             "projectReferences": {
               "D:\\BolsaDeEmpleoFINAL\\lib_entidades\\lib_entidades.csproj": {
                 "projectPath": "D:\\BolsaDeEmpleoFINAL\\lib_entidades\\lib_entidades.csproj"
@@ -93,6 +94,8 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
+=======
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
             "projectReferences": {}
           }
         },

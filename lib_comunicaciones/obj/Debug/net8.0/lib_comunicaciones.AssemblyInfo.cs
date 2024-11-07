@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lib_comunicaciones")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3813b8a9886472c3dfd95c8b7a2c47d11a90d691")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5cf17a6a4ca300b5b4be7ae3bb156afc313dd8b3")]
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
 [assembly: System.Reflection.AssemblyProductAttribute("lib_comunicaciones")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lib_comunicaciones")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

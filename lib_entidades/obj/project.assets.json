@@ -8,11 +8,21 @@
     "net8.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Janus\\.nuget\\packages\\": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\Emune\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\sofia\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\BolsaDeEmpleoFINAL\\lib_entidades\\lib_entidades.csproj",
       "projectName": "lib_entidades",
       "projectPath": "D:\\BolsaDeEmpleoFINAL\\lib_entidades\\lib_entidades.csproj",
@@ -21,6 +31,29 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+      "projectName": "lib_entidades",
+      "projectPath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+      "packagesPath": "C:\\Users\\Emune\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+      "projectName": "lib_entidades",
+      "projectPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+      "packagesPath": "C:\\Users\\sofia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_entidades\\obj\\",
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+<<<<<<< HEAD
+        "C:\\Users\\Emune\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\sofia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -70,5 +103,21 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
+<<<<<<< HEAD
   }
+=======
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+<<<<<<< HEAD
+      "message": "Problem reading the cache file C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problem reading the cache file D:\\BolsaDeEmpleoFINAL\\lib_entidades\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
+    }
+  ]
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
 }

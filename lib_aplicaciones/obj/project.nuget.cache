@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "cNyY69xH85U=",
+=======
+  "dgSpecHash": "eKiagP48A8U=",
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
   "success": true,
   "projectFilePath": "D:\\BolsaDeEmpleoFINAL\\lib_aplicaciones\\lib_aplicaciones.csproj",
   "expectedPackageFiles": [],
