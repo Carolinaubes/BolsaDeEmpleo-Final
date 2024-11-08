@@ -2,6 +2,9 @@
   "format": 1,
   "restore": {
 <<<<<<< HEAD
+    "D:\\BolsaDeEmpleoFINAL\\lib_presentaciones\\lib_presentaciones.csproj": {}
+=======
+<<<<<<< HEAD
     "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj": {}
   },
   "projects": {
@@ -15,13 +18,22 @@
         "outputPath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_presentaciones\\obj\\",
 =======
     "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj": {}
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
   },
   "projects": {
-    "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj": {
+    "D:\\BolsaDeEmpleoFINAL\\lib_presentaciones\\lib_presentaciones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj",
+        "projectUniqueName": "D:\\BolsaDeEmpleoFINAL\\lib_presentaciones\\lib_presentaciones.csproj",
         "projectName": "lib_presentaciones",
+<<<<<<< HEAD
+        "projectPath": "D:\\BolsaDeEmpleoFINAL\\lib_presentaciones\\lib_presentaciones.csproj",
+        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
+        "outputPath": "D:\\BolsaDeEmpleoFINAL\\lib_presentaciones\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
         "projectPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj",
         "packagesPath": "C:\\Users\\sofia\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_presentaciones\\obj\\",
@@ -34,6 +46,7 @@
           "C:\\Users\\sofia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
 >>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -80,10 +93,14 @@
             }
           },
 <<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
 =======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
 >>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
         }
       }
     }

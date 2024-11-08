@@ -18,10 +18,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		datos.JSON = datos.JSON
 	EndProjectSection
 EndProject
+<<<<<<< HEAD
+=======
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_comunicaciones", "lib_comunicaciones\lib_comunicaciones.csproj", "{CBBD77D2-7303-4AC3-A528-01F667B3FCE9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_aplicaciones", "lib_aplicaciones\lib_aplicaciones.csproj", "{9A338E3C-FD41-4527-B034-4BE18CF947BF}"
 EndProject
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_repositorios", "lib_repositorios\lib_repositorios.csproj", "{DFBB80F2-A4D8-4EBF-BD55-7C4E501A1B48}"
 EndProject
 Global
@@ -52,9 +55,13 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2D7C55C2-7DBE-4ACF-872F-34C61E29935A} = {52F0606A-42F5-4C87-B0F7-5C5DC8044F0C}
+<<<<<<< HEAD
+		{DFBB80F2-A4D8-4EBF-BD55-7C4E501A1B48} = {5E33DAAF-02A6-4BB5-92EE-D7A5D102188A}
+=======
 		{CBBD77D2-7303-4AC3-A528-01F667B3FCE9} = {83B31EE9-15BC-4B50-9562-8B5FE59E772D}
 		{9A338E3C-FD41-4527-B034-4BE18CF947BF} = {5E33DAAF-02A6-4BB5-92EE-D7A5D102188A}
 		{DFBB80F2-A4D8-4EBF-BD55-7C4E501A1B48} = {52F0606A-42F5-4C87-B0F7-5C5DC8044F0C}
+>>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {548ABE66-03EB-4961-92AB-0891A2ECEC89}
