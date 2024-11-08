@@ -1,31 +1,45 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "lib_entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/lib_entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/lib_entidades.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "lib_entidades/1.0.0": {
+      "type": "project",
+      "path": "../lib_entidades/lib_entidades.csproj",
+      "msbuildProject": "../lib_entidades/lib_entidades.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "lib_entidades >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\sofia\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Emune\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
+      "projectUniqueName": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
       "projectName": "lib_aplicaciones",
-      "projectPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
-      "packagesPath": "C:\\Users\\sofia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_aplicaciones\\obj\\",
+      "projectPath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
+      "packagesPath": "C:\\Users\\Emune\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_aplicaciones\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sofia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Emune\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,13 +47,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+              "projectPath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -72,7 +89,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
