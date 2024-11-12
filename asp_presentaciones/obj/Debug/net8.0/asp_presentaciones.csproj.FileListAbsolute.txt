@@ -1,0 +1,8 @@
+C:\Users\erian\Source\Repos\BolsaDeEmpleo-Final\asp_presentaciones\obj\Debug\net8.0\asp_presentaciones.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erian\Source\Repos\BolsaDeEmpleo-Final\asp_presentaciones\obj\Debug\net8.0\asp_presentaciones.AssemblyInfoInputs.cache
+C:\Users\erian\Source\Repos\BolsaDeEmpleo-Final\asp_presentaciones\obj\Debug\net8.0\asp_presentaciones.AssemblyInfo.cs
+C:\Users\erian\Source\Repos\BolsaDeEmpleo-Final\asp_presentaciones\obj\Debug\net8.0\asp_presentaciones.csproj.CoreCompileInputs.cache
+C:\Users\erian\Source\Repos\BolsaDeEmpleo-Final\asp_presentaciones\obj\Debug\net8.0\asp_presentaciones.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\erian\Source\Repos\BolsaDeEmpleo-Final\asp_presentaciones\obj\Debug\net8.0\asp_presentaciones.RazorAssemblyInfo.cache
+C:\Users\erian\Source\Repos\BolsaDeEmpleo-Final\asp_presentaciones\obj\Debug\net8.0\asp_presentaciones.RazorAssemblyInfo.cs
+C:\Users\erian\Source\Repos\BolsaDeEmpleo-Final\asp_presentaciones\obj\Debug\net8.0\asp_presentaciones.sourcelink.json
