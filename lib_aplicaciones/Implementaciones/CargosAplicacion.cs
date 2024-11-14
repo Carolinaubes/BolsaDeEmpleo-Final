@@ -55,11 +55,7 @@ namespace lib_aplicaciones.Implementaciones
             switch (tipo.ToUpper())
             {
                 case "NOMBRE": condiciones = x => x.Nombre!.Contains(entidad.Nombre!); break;
-                case "CODIGO ESTUDIO": condiciones = x => x.Cod_estudio == entidad.Cod_estudio; break;
-                case "COMPLEJA":
-                    condiciones =
-                        x => x.Nombre!.Contains(entidad.Nombre!) ||
-                             x.Cod_estudio == entidad.Cod_estudio; break;
+                
                 default: condiciones = x => x.Id == entidad.Id; break;
             }
             return this.iRepositorio!.Buscar(condiciones);

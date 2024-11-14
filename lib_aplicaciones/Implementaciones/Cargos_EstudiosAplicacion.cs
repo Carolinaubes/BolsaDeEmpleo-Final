@@ -54,12 +54,12 @@ namespace lib_aplicaciones.Implementaciones
             Expression<Func<Cargos_Estudios, bool>>? condiciones = null;
             switch (tipo.ToUpper())
             {
-                case "NOMBRE": condiciones = x => x.Nombre!.Contains(entidad.Nombre!); break;
-                case "CODIGO ESTUDIO": condiciones = x => x.Cod_estudio == entidad.Cod_estudio; break;
+                case "NOMBRE CARGO": condiciones = x => x._Cargo!.Nombre!.Contains(entidad._Cargo!.Nombre!); break;
+                case "CODIGO ESTUDIO": condiciones = x => x._Estudio!.Cod_estudio == entidad._Estudio!.Cod_estudio; break;
                 case "COMPLEJA":
                     condiciones =
-                        x => x.Nombre!.Contains(entidad.Nombre!) ||
-                             x.Cod_estudio == entidad.Cod_estudio; break;
+                        x => x._Cargo!.Nombre!.Contains(entidad._Cargo!.Nombre!) ||
+                             x._Estudio!.Cod_estudio == entidad._Estudio!.Cod_estudio; break;
                 default: condiciones = x => x.Id == entidad.Id; break;
             }
             return this.iRepositorio!.Buscar(condiciones);
