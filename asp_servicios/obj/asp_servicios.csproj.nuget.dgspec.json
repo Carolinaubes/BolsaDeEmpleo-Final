@@ -1,0 +1,355 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj": {}
+  },
+  "projects": {
+    "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj",
+        "projectName": "asp_servicios",
+        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj",
+        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
+        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj"
+              },
+              "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj"
+              },
+              "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj"
+              },
+              "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj",
+        "projectName": "lib_aplicaciones",
+        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj",
+        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
+        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj",
+        "projectName": "lib_entidades",
+        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj",
+        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
+        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj",
+        "projectName": "lib_repositorios",
+        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj",
+        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
+        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj",
+        "projectName": "lib_utilidades",
+        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj",
+        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
+        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

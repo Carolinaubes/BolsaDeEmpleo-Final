@@ -1,0 +1,88 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using lib_utilidades;
+using System.Security.Claims;
+using System.Text;
+
+namespace asp_servicios.Controllers
+{
+    public class TokenController : ControllerBase
+    {
+        private Dictionary<string, object> ObtenerDatos()
+        {
+            var respuesta = new Dictionary<string, object>();
+            try
+            {
+                var datos = new StreamReader(Request.Body).ReadToEnd().ToString();
+                if (string.IsNullOrEmpty(datos))
+                    datos = "{}";
+                return JsonConversor.ConvertirAObjeto(datos); //devuelve siempre el usuario que le mandamos en el BODY (NO LO GENERA)
+            }
+            catch (Exception ex)
+            {
+                respuesta["Error"] = ex.Message.ToString();
+                return respuesta;
+            }
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("Token/Autenticar")]
+        public string Autenticar()
+        {
+            var respuesta = new Dictionary<string, object>();
+            try
+            {
+                var datos = ObtenerDatos();
+                if (!datos.ContainsKey("Usuario") ||
+                    datos["Usuario"].ToString()! != DatosGenerales.usuario_datos) //Se obtiene el token que genera
+                {
+                    respuesta["Error"] = "lbNoAutenticacion";
+                    return JsonConversor.ConvertirAString(respuesta);
+                }
+
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(new Claim[] {
+                    new Claim(ClaimTypes.Name, datos["Usuario"].ToString()!)
+                }),
+                    Expires = DateTime.UtcNow.AddHours(1),
+                    SigningCredentials = new SigningCredentials(
+                        new SymmetricSecurityKey(Encoding.UTF8.GetBytes(DatosGenerales.clave)),
+                        SecurityAlgorithms.HmacSha256Signature)
+                };
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+
+                respuesta["Token"] = tokenHandler.WriteToken(token);
+                return JsonConversor.ConvertirAString(respuesta);
+            }
+            catch (Exception ex)
+            {
+                respuesta["Error"] = ex.ToString();
+                return JsonConversor.ConvertirAString(respuesta);
+            }
+        }
+
+        public bool Validate(Dictionary<string, object> data)
+        {
+            try
+            {
+                var authorizationHeader = data["Bearer"].ToString(); //obtiene el token del bearer
+                authorizationHeader = authorizationHeader!.Replace("Bearer ", "");
+                var tokenHandler = new JwtSecurityTokenHandler();
+                SecurityToken token = tokenHandler.ReadToken(authorizationHeader);
+                if (DateTime.UtcNow > token.ValidTo) //El token del bearer no esta vigente
+                    return false;
+                return true; //todo esta bien con el token del bearer
+            }
+            catch
+            {
+                return false; //datos es el diccionario que actua como body, si este esta vacio, significa
+                //que no enviaron el bearer con el token
+            }
+        }
+    }
+}
