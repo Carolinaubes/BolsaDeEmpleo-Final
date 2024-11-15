@@ -16,13 +16,10 @@ namespace asp_presentacion
 
         public void ConfigureServices(WebApplicationBuilder builder, IServiceCollection services)
         {
-            services.AddScoped<Conexion, Conexion>();
-            // Repositorios
-            services.AddScoped<IEmpresasRepositorio, EmpresasRepositorio>();
-            // Aplicaciones
-            services.AddScoped<IEmpresasAplicacion, EmpresasAplicacion>();
-            // Controladores
-            services.AddScoped<TokenController, TokenController>();
+            // Comunicaciones
+            services.AddScoped<IEstudiosComunicacion, EstudiosComunicacion>();
+            // Presentaciones
+            services.AddScoped<IEstudiosPresentacion, EstudiosPresentacion>();
 
             services.AddControllers();
             services.AddEndpointsApiExplorer();
