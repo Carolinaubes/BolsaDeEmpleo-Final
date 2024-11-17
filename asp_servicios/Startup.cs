@@ -31,8 +31,27 @@ namespace asp_servicios
             services.AddScoped<Conexion, Conexion>();
             // Repositorios
             services.AddScoped<IEstudiosRepositorio, EstudiosRepositorio>();
+            services.AddScoped<IEmpresasRepositorio, EmpresasRepositorio>();
+            services.AddScoped<ICargosRepositorio, CargosRepositorio>();
+            services.AddScoped<ICargos_EstudiosRepositorio, Cargos_EstudiosRepositorio>();
+            services.AddScoped<IPersonas_EstudiosRepositorio, Personas_EstudiosRepositorio>();
+            services.AddScoped<IPersonasRepositorio, PersonasRepositorio>();
+            services.AddScoped<IPostulacionesRepositorio, PostulacionesRepositorio>();
+            services.AddScoped<IRolesRepositorio, RolesRepositorio>();
+            services.AddScoped<IAccionesRepositorio, AccionesRepositorio>();
+            services.AddScoped<IAuditoriasRepositorio, AuditoriasRepositorio>();
+
             // Aplicaciones
             services.AddScoped<IEstudiosAplicacion, EstudiosAplicacion>();
+            services.AddScoped<IEmpresasAplicacion, EmpresasAplicacion>();
+            services.AddScoped<ICargosAplicacion, CargosAplicacion>();
+            services.AddScoped<ICargos_EstudiosAplicacion, Cargos_EstudiosAplicacion>();
+            services.AddScoped<IPersonas_EstudiosAplicacion, Personas_EstudiosAplicacion>();
+            services.AddScoped<IPersonasAplicacion, PersonasAplicacion>();
+            services.AddScoped<IPostulacionesAplicacion, PostulacionesAplicacion>();
+            services.AddScoped<IRolesAplicacion, RolesAplicacion>();
+            services.AddScoped<IAccionesAplicacion, AccionesAplicacion>();
+            services.AddScoped<IAuditoriasAplicacion, AuditoriasAplicacion>();
             // Controladores
             services.AddScoped<TokenController, TokenController>();
 
