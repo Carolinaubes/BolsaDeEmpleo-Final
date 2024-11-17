@@ -6,11 +6,11 @@ using lib_entidades.Modelos;
 
 namespace lib_aplicaciones.Implementaciones
 {
-    public class AuditoriasAplicacion : IAuditoriasAplicacion
+    public class AccionesAplicacion : IAccionesAplicacion
     {
-        private IAuditoriasRepositorio? iRepositorio = null;
+        private IAccionesRepositorio? iRepositorio = null;
 
-        public AuditoriasAplicacion(IAuditoriasRepositorio iRepositorio)
+        public AccionesAplicacion(IAccionesRepositorio iRepositorio)
         {
             this.iRepositorio = iRepositorio;
         }
@@ -20,7 +20,7 @@ namespace lib_aplicaciones.Implementaciones
             this.iRepositorio!.Configurar(string_conexion);
         }
 
-        public Auditorias Borrar(Auditorias entidad)
+        public Acciones Borrar(Acciones entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -32,7 +32,7 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public Auditorias Guardar(Auditorias entidad)
+        public Acciones Guardar(Acciones entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -44,29 +44,24 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public List<Auditorias> Listar()
+        public List<Acciones> Listar()
         {
             return iRepositorio!.Listar();
         }
 
-        public List<Auditorias> Buscar(Auditorias entidad, string tipo)
+        public List<Acciones> Buscar(Acciones entidad, string tipo)
         {
-            Expression<Func<Auditorias, bool>>? condiciones = null;
+            Expression<Func<Acciones, bool>>? condiciones = null;
             switch (tipo.ToUpper())
             {
-                case "NOMBRE ENTIDAD": condiciones = x => x.Nom_Entidad!.Contains(entidad.Nom_Entidad!); break;
-                case "NOMBRE ACCION": condiciones = x => x._Accion!.Nombre == entidad._Accion!.Nombre; break;
-                case "COMPLEJA":
-                    condiciones =
-                        x => x.Nom_Entidad!.Contains(entidad.Nom_Entidad!) ||
-                             x._Accion!.Nombre == entidad._Accion!.Nombre; break;
-
+                case "NOMBRE ACCION": condiciones = x => x.Nombre!.Contains(entidad.Nombre!); break;
+                
                 default: condiciones = x => x.Id == entidad.Id; break;
             }
             return this.iRepositorio!.Buscar(condiciones);
         }
 
-        public Auditorias Modificar(Auditorias entidad)
+        public Acciones Modificar(Acciones entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -79,3 +74,4 @@ namespace lib_aplicaciones.Implementaciones
         }
     }
 }
+
