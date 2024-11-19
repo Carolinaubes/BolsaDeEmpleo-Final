@@ -11,7 +11,7 @@ namespace lib_entidades.Modelos
         public int Accion_id { get; set; } //Identificador de la accion que se hizo
 
         //Creacion de objetos
-        [NotMapped] public Acciones? _Accion { get; set; } //Objeto de Acciones
+        [ForeignKey("Accion_id")] public Acciones? _Accion { get; set; } //Objeto de Acciones
 
         public bool Validar()
         {

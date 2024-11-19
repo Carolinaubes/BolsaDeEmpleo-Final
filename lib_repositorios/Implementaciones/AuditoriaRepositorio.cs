@@ -20,7 +20,7 @@ namespace lib_repositorios.Implementaciones
 
         public List<Auditorias> Listar()
         {
-            return conexion!.Listar<Auditorias>();
+            return Buscar(x => x != null);
         }
 
         public List<Auditorias> Buscar(Expression<Func<Auditorias, bool>> condiciones)

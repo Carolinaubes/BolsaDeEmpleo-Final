@@ -11,8 +11,8 @@ namespace lib_entidades.Modelos
         public bool Disponibilidad { get; set; } //Se refiere a la disponibilidad de la vacante, si está activa o no
 
         //Creacion de objetos
-        [NotMapped] public Empresas? _Empresa { get; set; }//Objeto de empresa
-        [NotMapped] public Cargos? _Cargo { get; set; } //Objeto de cargo
+        [ForeignKey("Empresa_id")] public Empresas? _Empresa { get; set; }//Objeto de empresa
+        [ForeignKey("Cargo_id")] public Cargos? _Cargo { get; set; } //Objeto de cargo
 
         public bool Validar()
         {

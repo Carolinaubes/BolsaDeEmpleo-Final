@@ -20,13 +20,14 @@ namespace lib_repositorios.Implementaciones
 
         public List<Vacantes> Listar()
         {
-            return conexion!.Listar<Vacantes>();
+            return Buscar(x => x != null);
         }
 
         public List<Vacantes> Buscar(Expression<Func<Vacantes, bool>> condiciones)
         {
             return conexion!.Buscar(condiciones);
         }
+
 
         public Vacantes Guardar(Vacantes entidad)
         {

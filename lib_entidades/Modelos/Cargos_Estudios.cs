@@ -10,8 +10,8 @@ namespace lib_entidades.Modelos
         public int Estudio_id { get; set; } //Identificador de Estudio
 
         //Creacion de objetos
-        [NotMapped] public Cargos? _Cargo { get; set; } //Objeto de Cargos
-        [NotMapped] public Estudios? _Estudio { get; set; } //Objeto de Estudios
+        [ForeignKey("Cargo_id")] public Cargos? _Cargo { get; set; } //Objeto de Cargos
+        [ForeignKey("Estudio_id")] public Estudios? _Estudio { get; set; } //Objeto de Estudios
 
         public bool Validar()
         {

@@ -8,7 +8,7 @@ namespace lib_repositorios
     public class Conexion : DbContext
     {
         public string? StringConnection { get; set; }
-
+        private int tamaño = 20;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(this.StringConnection!, p => { });
@@ -34,12 +34,65 @@ namespace lib_repositorios
 
         public virtual List<T> Listar<T>() where T : class, new()
         {
-            return this.Set<T>().ToList();
+            return this.Set<T>()
+                .Take(tamaño)
+                .ToList();
         }
 
         public virtual List<T> Buscar<T>(Expression<Func<T, bool>> condiciones) where T : class, new()
         {
-            return this.Set<T>().Where(condiciones).ToList();
+            return this.Set<T>()
+                .Where(condiciones)
+                .Take(tamaño)
+                .ToList();
+        }
+        public virtual List<Cargos_Estudios> Buscar(Expression<Func<Cargos_Estudios, bool>> condiciones)
+        {
+            return this.Set<Cargos_Estudios>()
+                .Include(x => x._Cargo)
+                .Include(x => x._Estudio)
+                .Where(condiciones)
+                .Take(tamaño)
+                .ToList();
+        }
+
+        public virtual List<Personas_Estudios> Buscar(Expression<Func<Personas_Estudios, bool>> condiciones)
+        {
+            return this.Set<Personas_Estudios>()
+                .Include(x => x._Persona)
+                .Include(x => x._Estudio)
+                .Where(condiciones)
+                .Take(tamaño)
+                .ToList();
+        }
+
+        public virtual List<Postulaciones> Buscar(Expression<Func<Postulaciones, bool>> condiciones)
+        {
+            return this.Set<Postulaciones>()
+                .Include(x => x._Vacantes)
+                .Include(x => x._Personas)
+                .Where(condiciones)
+                .Take(tamaño)
+                .ToList();
+        }
+
+        public virtual List<Auditorias> Buscar(Expression<Func<Auditorias, bool>> condiciones)
+        {
+            return this.Set<Auditorias>()
+                .Include(x => x._Accion)
+                .Where(condiciones)
+                .Take(tamaño)
+                .ToList();
+        }
+
+        public virtual List<Vacantes> Buscar(Expression<Func<Vacantes, bool>> condiciones)
+        {
+            return this.Set<Vacantes>()
+                .Include(x => x._Empresa)
+                .Include(x => x._Cargo)
+                .Where(condiciones)
+                .Take(tamaño)
+                .ToList();
         }
 
         public virtual bool Existe<T>(Expression<Func<T, bool>> condiciones) where T : class, new()

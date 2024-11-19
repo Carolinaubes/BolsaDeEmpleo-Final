@@ -12,7 +12,7 @@ namespace lib_entidades.Modelos
         public int Rol_id { get; set; } //Rol que posee: Empresa o Persona
 
         //Creacion de objetos
-        [NotMapped] public Roles? _Rol { get; set; } //Objeto de Roles
+        //[NotMapped] public Roles? _Rol { get; set; } //Objeto de Roles
 
         public bool Validar()
         {

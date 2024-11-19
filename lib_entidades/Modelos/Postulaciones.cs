@@ -11,8 +11,8 @@ namespace lib_entidades.Modelos
         public bool Elegido { get; set; } //Indica si la persona fue seleccionada o no
 
         //Creacion de objetos
-        [NotMapped] public Vacantes? _Vacantes { get; set; } //Objeto de vacantes
-        [NotMapped] public Personas? _Personas { get; set; } //Objeto de personas
+        [ForeignKey("Vacante_id")] public Vacantes? _Vacantes { get; set; } //Objeto de vacantes
+        [ForeignKey("Persona_id")] public Personas? _Personas { get; set; } //Objeto de personas
 
         public bool Validar()
         {

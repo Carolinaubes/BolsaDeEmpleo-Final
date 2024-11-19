@@ -20,8 +20,9 @@ namespace lib_repositorios.Implementaciones
 
         public List<Personas_Estudios> Listar()
         {
-            return conexion!.Listar<Personas_Estudios>();
+            return Buscar(x => x!=null);
         }
+
 
         public List<Personas_Estudios> Buscar(Expression<Func<Personas_Estudios, bool>> condiciones)
         {
