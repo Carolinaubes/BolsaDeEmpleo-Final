@@ -8,95 +8,93 @@ go
 
 --Crear las tablas
 CREATE TABLE Roles( --Tabla Roles
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1), 
-	nombre NVARCHAR(100) NOT NULL
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1), 
+	Nombre NVARCHAR(100) NOT NULL
 );
 go
 
 CREATE TABLE Empresas( --Tabla Empresas
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1), 
-	cod_empresa INT NOT NULL,
-	nombre NVARCHAR(100) NOT NULL,
-	direccion NVARCHAR(100),
-	rol_id INT NOT NULL,
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1), 
+	Cod_empresa INT NOT NULL,
+	Nombre NVARCHAR(100) NOT NULL,
+	Direccion NVARCHAR(100),
+	Rol_id INT NOT NULL,
 	
-	FOREIGN KEY (rol_id) REFERENCES Roles(id)
+	FOREIGN KEY (Rol_id) REFERENCES Roles(Id)
 );
 go
 
 CREATE TABLE Personas( --Tabla Personas
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	cedula NVARCHAR(10) NOT NULL,
-	nombre NVARCHAR(100) NOT NULL,
-	direccion NVARCHAR(100),
-	rol_id INT NOT NULL,
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Cedula NVARCHAR(10) NOT NULL,
+	Nombre NVARCHAR(100) NOT NULL,
+	Direccion NVARCHAR(100),
+	Rol_id INT NOT NULL,
 	
-	FOREIGN KEY (rol_id) REFERENCES Roles(id)
+	FOREIGN KEY (Rol_id) REFERENCES Roles(Id)
 );
 go
 
 CREATE TABLE Estudios( --Tabla Estudios
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	cod_estudio INT NOT NULL,
-	nombre NVARCHAR(100) NOT NULL
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Cod_estudio INT NOT NULL,
+	Nombre NVARCHAR(100) NOT NULL
 );
 go
 
 CREATE TABLE Cargos( --Tabla Cargos
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	nombre NVARCHAR(100) NOT NULL
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Nombre NVARCHAR(100) NOT NULL
 );
 go
 
 CREATE TABLE Personas_Estudios( --Tabla Personas_Estudios
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	persona_id INT NOT NULL,
-	estudio_id INT NOT NULL,
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Persona_id INT NOT NULL,
+	Estudio_id INT NOT NULL,
 
-	FOREIGN KEY (persona_id) REFERENCES Personas(id),
-	FOREIGN KEY (estudio_id) REFERENCES Estudios(id)
+	FOREIGN KEY (Persona_id) REFERENCES Personas(Id),
+	FOREIGN KEY (Estudio_id) REFERENCES Estudios(Id)
 );
 go
 
 CREATE TABLE Cargos_Estudios( --Tabla Cargos_Estudios 
 	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	cargo_id INT NOT NULL,
-	estudio_id INT NOT NULL,
+	Cargo_id INT NOT NULL,
+	Estudio_id INT NOT NULL,
 
-	FOREIGN KEY (cargo_id) REFERENCES Cargos(id),
-	FOREIGN KEY (estudio_id) REFERENCES Estudios(id)
+	FOREIGN KEY (Cargo_id) REFERENCES Cargos(Id),
+	FOREIGN KEY (Estudio_id) REFERENCES Estudios(Id)
 );
 go
 
 CREATE TABLE Vacantes( --Tabla Vacantes
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	empresa_id INT NOT NULL,
-	cargo_id INT NOT NULL,
-	disponibilidad BIT NOT NULL DEFAULT 0,
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Empresa_id INT NOT NULL,
+	Cargo_id INT NOT NULL,
+	Disponibilidad BIT NOT NULL DEFAULT 0,
 
-	FOREIGN KEY (empresa_id) REFERENCES Empresas(id),
-	FOREIGN KEY (cargo_id) REFERENCES Cargos(id)
+	FOREIGN KEY (Empresa_id) REFERENCES Empresas(Id),
+	FOREIGN KEY (Cargo_id) REFERENCES Cargos(Id)
 );
 go
 
 CREATE TABLE Postulaciones( --Tabla Postulaciones
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	vacante_id INT NOT NULL,
-	persona_id INT NOT NULL,
-	elegido BIT NOT NULL DEFAULT 0,
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Vacante_id INT NOT NULL,
+	Persona_id INT NOT NULL,
+	Elegido BIT NOT NULL DEFAULT 0,
 	
-	FOREIGN KEY (vacante_id) REFERENCES Vacantes(id),
-	FOREIGN KEY (persona_id) REFERENCES Personas(id)
+	FOREIGN KEY (Vacante_id) REFERENCES Vacantes(Id),
+	FOREIGN KEY (Persona_id) REFERENCES Personas(Id)
 );
 go
 
 CREATE TABLE Auditorias( --Tabla Auditorias
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	nom_Entidad NVARCHAR(100) NOT NULL,
-	entidad_id INT NOT NULL,
-	accion_id INT NOT NULL,
-	
-	FOREIGN KEY (accion_id) REFERENCES Acciones(id)
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Nom_Entidad NVARCHAR(100) NOT NULL,
+	Entidad_id INT NOT NULL,
+	Accion INT NOT NULL
 );
 go
 
@@ -111,44 +109,44 @@ SELECT * FROM Vacantes;
 SELECT * FROM Postulaciones;
 
 --Insertando valores en cada una de las tablas
-INSERT INTO Roles (nombre)
+INSERT INTO Roles (Nombre)
 VALUES ('Empresa'),
 	   ('Persona');
 GO
 
-INSERT INTO Empresas (cod_empresa, nombre, direccion, rol_id)
+INSERT INTO Empresas (Cod_empresa, Nombre, Direccion, Rol_id)
 VALUES (111,'Exito','Calle 4',1);
 GO
 
-INSERT INTO Cargos (nombre)
+INSERT INTO Cargos (Nombre)
 VALUES ('Desarrollador');
 GO
 
-INSERT INTO Vacantes (empresa_id,cargo_id,disponibilidad)
+INSERT INTO Vacantes (Empresa_id,Cargo_id,Disponibilidad)
 VALUES (1,1,1);
 GO
 
-INSERT INTO Personas (cedula,nombre,direccion, rol_id)
+INSERT INTO Personas (Cedula,Nombre,Direccion, Rol_id)
 VALUES ('1010','Julian','Calle 10',2);
 GO
 
-INSERT INTO Postulaciones(persona_id,vacante_id,elegido)
+INSERT INTO Postulaciones(Persona_id,Vacante_id,Elegido)
 VALUES (1,1,1);
 GO
 
-INSERT INTO Estudios(cod_estudio,nombre)
+INSERT INTO Estudios(Cod_estudio,Nombre)
 VALUES (1,'Ingenieria');
 GO
 
-INSERT INTO Personas_Estudios(persona_id,estudio_id)
+INSERT INTO Personas_Estudios(Persona_id,Estudio_id)
 VALUES (1,1);
 GO
 
-INSERT INTO Cargos (nombre)
+INSERT INTO Cargos (Nombre)
 VALUES ('Desarrollador');
 GO
 
-INSERT INTO Cargos_Estudios(estudio_id,cargo_id)
+INSERT INTO Cargos_Estudios(Estudio_id,Cargo_id)
 VALUES (1,1);
 GO
 
