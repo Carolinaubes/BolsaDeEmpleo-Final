@@ -4,7 +4,7 @@ using lib_utilidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace asp_presentacion.Pages.Ventanas
+namespace asp_presentaciones.Pages.Ventanas
 {
     public class EmpresasModel : PageModel
     {
@@ -16,6 +16,7 @@ namespace asp_presentacion.Pages.Ventanas
             {
                 this.iPresentacion = iPresentacion;
                 Filtro = new Empresas();
+                //_Rol = new Roles();
             }
             catch (Exception ex)
             {
@@ -27,8 +28,12 @@ namespace asp_presentacion.Pages.Ventanas
         [BindProperty] public Empresas? Actual { get; set; }
         [BindProperty] public Empresas? Filtro { get; set; }
         [BindProperty] public List<Empresas>? Lista { get; set; }
+        [BindProperty] public Roles? _Rol { get; set; }
 
-        public virtual void OnGet() { OnPostBtRefrescar(); }
+        public virtual void OnGet()
+        {
+                OnPostBtRefrescar();
+        }
 
         public void OnPostBtRefrescar()
         {
@@ -53,10 +58,7 @@ namespace asp_presentacion.Pages.Ventanas
             try
             {
                 Accion = Enumerables.Ventanas.Editar;
-                Actual = new Empresas()
-                {
-                    Fecha = DateTime.Now,
-                };
+                Actual = new Empresas();
             }
             catch (Exception ex)
             {

@@ -4,7 +4,7 @@ using lib_utilidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace asp_presentacion.Pages.Ventanas
+namespace asp_presentaciones.Pages.Ventanas
 {
     public class AuditoriasModel : PageModel
     {
@@ -35,10 +35,10 @@ namespace asp_presentacion.Pages.Ventanas
         {
             try
             {
-                Filtro!.Nombre = Filtro!.Nombre ?? "";
+                Filtro!.Nom_Entidad = Filtro!.Nom_Entidad ?? "";
 
                 Accion = Enumerables.Ventanas.Listas;
-                var task = this.iPresentacion!.Buscar(Filtro!, "NOMBRE");
+                var task = this.iPresentacion!.Buscar(Filtro!, "NOMBRE ENTIDAD");
                 task.Wait();
                 Lista = task.Result;
                 Actual = null;

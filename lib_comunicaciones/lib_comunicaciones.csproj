@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+	<ProjectReference Include="..\lib_utilidades\lib_utilidades.csproj" />
+  </ItemGroup>
+	
 </Project>

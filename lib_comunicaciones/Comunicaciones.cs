@@ -8,7 +8,7 @@ namespace lib_comunicaciones
     {
         //si tengo una comunicacion y 5 servicios  que hago para no quemar la conexion?
         public string? Protocolo = "http://",
-            Host = "localhost:5057",
+            Host = "localhost:5063",
             Servicio = "",// "asp_notas_servicios/", // nombre del servicio
             Nombre = string.Empty, //nombre del controlador al que nos vamos a conectar
             Final = string.Empty,

@@ -18,7 +18,6 @@ namespace asp_presentacion
         {
             // Comunicaciones
             services.AddScoped<IVacantesComunicacion, VacantesComunicacion>();
-            services.AddScoped<IRolesComunicacion, RolesComunicacion>();
             services.AddScoped<IPostulacionesComunicacion, PostulacionesComunicacion>();
             services.AddScoped<IPersonas_EstudiosComunicacion, Personas_EstudiosComunicacion>();
             services.AddScoped<IPersonasComunicacion, PersonasComunicacion>();
@@ -30,7 +29,6 @@ namespace asp_presentacion
 
             // Presentaciones
             services.AddScoped<IVacantesPresentacion, VacantesPresentacion>();
-            services.AddScoped<IRolesPresentacion, RolesPresentacion>();
             services.AddScoped<IPostulacionesPresentacion, PostulacionesPresentacion>();
             services.AddScoped<IPersonas_EstudiosPresentacion, Personas_EstudiosPresentacion>();
             services.AddScoped<IPersonasPresentacion, PersonasPresentacion>();
