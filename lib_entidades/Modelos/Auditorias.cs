@@ -11,7 +11,6 @@ namespace lib_entidades.Modelos
         public string? Accion { get; set; } //Accion que se hizo
 
         
-
         public bool Validar()
         {
             if (string.IsNullOrEmpty(Nom_Entidad) ||

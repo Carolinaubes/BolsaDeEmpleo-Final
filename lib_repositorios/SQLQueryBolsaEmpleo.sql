@@ -94,7 +94,7 @@ CREATE TABLE Auditorias( --Tabla Auditorias
 	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
 	Nom_Entidad NVARCHAR(100) NOT NULL,
 	Entidad_id INT NOT NULL,
-	Accion INT NOT NULL
+	Accion NVARCHAR(50) NOT NULL
 );
 go
 
