@@ -33,6 +33,14 @@ namespace lib_repositorios.Implementaciones
         {
             conexion!.Guardar(entidad);
             conexion!.GuardarCambios();
+
+            IAuditoriasRepositorio!.Guardar(new Auditorias()
+            {
+                Nom_Entidad = "Personas_Estudios",
+                Entidad_id = entidad.Id,
+                Accion = "Guardar"
+            });
+
             return entidad;
         }
 
@@ -40,6 +48,14 @@ namespace lib_repositorios.Implementaciones
         {
             conexion!.Modificar(entidad);
             conexion!.GuardarCambios();
+
+            IAuditoriasRepositorio!.Guardar(new Auditorias()
+            {
+                Nom_Entidad = "Personas_Estudios",
+                Entidad_id = entidad.Id,
+                Accion = "Modificar"
+            });
+
             return entidad;
         }
 
@@ -47,6 +63,14 @@ namespace lib_repositorios.Implementaciones
         {
             conexion!.Borrar(entidad);
             conexion!.GuardarCambios();
+
+            IAuditoriasRepositorio!.Guardar(new Auditorias()
+            {
+                Nom_Entidad = "Personas_Estudios",
+                Entidad_id = entidad.Id,
+                Accion = "Borrar"
+            });
+
             return entidad;
         }
     }
