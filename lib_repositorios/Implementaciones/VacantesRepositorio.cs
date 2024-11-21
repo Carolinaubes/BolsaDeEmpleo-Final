@@ -33,6 +33,14 @@ namespace lib_repositorios.Implementaciones
         {
             conexion!.Guardar(entidad);
             conexion!.GuardarCambios();
+
+            IAuditoriasRepositorio!.Guardar(new Auditorias()
+            {
+                Nom_Entidad = "Vacantes",
+                Entidad_id = entidad.Id,
+                Accion = "Guardar"
+            });
+
             return entidad;
         }
 
