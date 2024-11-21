@@ -152,10 +152,4 @@ INSERT INTO Cargos_Estudios(estudio_id,cargo_id)
 VALUES (1,1);
 GO
 
-INSERT INTO Acciones (nombre)
-VALUES ('Guardar'),
-	   ('Modificar'),
-	   ('Borrar');
-GO
-
 --La tabla de auditorias sera llenada desde el SERVICIO
