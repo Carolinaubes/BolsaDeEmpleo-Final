@@ -38,7 +38,7 @@ namespace asp_servicios
             services.AddScoped<IPersonasRepositorio, PersonasRepositorio>();
             services.AddScoped<IPostulacionesRepositorio, PostulacionesRepositorio>();
             services.AddScoped<IRolesRepositorio, RolesRepositorio>();
-            services.AddScoped<IAccionesRepositorio, AccionesRepositorio>();
+            s
             services.AddScoped<IAuditoriasRepositorio, AuditoriasRepositorio>();
             services.AddScoped<IVacantesRepositorio, VacantesRepositorio>();
 
@@ -51,7 +51,7 @@ namespace asp_servicios
             services.AddScoped<IPersonasAplicacion, PersonasAplicacion>();
             services.AddScoped<IPostulacionesAplicacion, PostulacionesAplicacion>();
             services.AddScoped<IRolesAplicacion, RolesAplicacion>();
-            services.AddScoped<IAccionesAplicacion, AccionesAplicacion>();
+           
             services.AddScoped<IAuditoriasAplicacion, AuditoriasAplicacion>();
             services.AddScoped<IVacantesAplicacion, VacantesAplicacion>();
             // Controladores
