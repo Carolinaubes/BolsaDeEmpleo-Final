@@ -7,10 +7,12 @@ namespace lib_repositorios.Implementaciones
     public class Personas_EstudiosRepositorio : IPersonas_EstudiosRepositorio
     {
         private Conexion? conexion = null;
+        private IAuditoriasRepositorio? iAuditoriasRepositorio = null;
 
-        public Personas_EstudiosRepositorio(Conexion conexion)
+        public Personas_EstudiosRepositorio(Conexion conexion, IAuditoriasRepositorio iAuditoriasRepositorio)
         {
             this.conexion = conexion;
+            this.iAuditoriasRepositorio = iAuditoriasRepositorio
         }
 
         public void Configurar(string string_conexion)
@@ -34,7 +36,7 @@ namespace lib_repositorios.Implementaciones
             conexion!.Guardar(entidad);
             conexion!.GuardarCambios();
 
-            IAuditoriasRepositorio!.Guardar(new Auditorias()
+            iAuditoriasRepositorio!.Guardar(new Auditorias()
             {
                 Nom_Entidad = "Personas_Estudios",
                 Entidad_id = entidad.Id,
@@ -49,7 +51,7 @@ namespace lib_repositorios.Implementaciones
             conexion!.Modificar(entidad);
             conexion!.GuardarCambios();
 
-            IAuditoriasRepositorio!.Guardar(new Auditorias()
+            iAuditoriasRepositorio!.Guardar(new Auditorias()
             {
                 Nom_Entidad = "Personas_Estudios",
                 Entidad_id = entidad.Id,
@@ -64,7 +66,7 @@ namespace lib_repositorios.Implementaciones
             conexion!.Borrar(entidad);
             conexion!.GuardarCambios();
 
-            IAuditoriasRepositorio!.Guardar(new Auditorias()
+            iAuditoriasRepositorio!.Guardar(new Auditorias()
             {
                 Nom_Entidad = "Personas_Estudios",
                 Entidad_id = entidad.Id,

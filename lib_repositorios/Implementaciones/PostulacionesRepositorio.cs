@@ -7,10 +7,12 @@ namespace lib_repositorios.Implementaciones
     public class PostulacionesRepositorio : IPostulacionesRepositorio
     {
         private Conexion? conexion = null;
+        private IAuditoriasRepositorio? iAuditoriasRepositorio = null;
 
-        public PostulacionesRepositorio(Conexion conexion)
+        public PostulacionesRepositorio(Conexion conexion, IAuditoriasRepositorio iAuditoriasRepositorio)
         {
             this.conexion = conexion;
+            this.iAuditoriasRepositorio = iAuditoriasRepositorio
         }
 
         public void Configurar(string string_conexion)
