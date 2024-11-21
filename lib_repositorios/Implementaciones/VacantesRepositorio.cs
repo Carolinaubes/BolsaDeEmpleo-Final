@@ -12,7 +12,7 @@ namespace lib_repositorios.Implementaciones
         public VacantesRepositorio(Conexion conexion, IAuditoriasRepositorio iAuditoriasRepositorio)
         {
             this.conexion = conexion;
-            this.iAuditoriasRepositorio = iAuditoriasRepositorio
+            this.iAuditoriasRepositorio = iAuditoriasRepositorio;
         }
 
         public void Configurar(string string_conexion)

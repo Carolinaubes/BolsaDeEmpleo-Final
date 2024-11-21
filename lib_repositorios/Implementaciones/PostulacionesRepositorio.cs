@@ -35,7 +35,7 @@ namespace lib_repositorios.Implementaciones
             conexion!.Guardar(entidad);
             conexion!.GuardarCambios();
 
-            IAuditoriasRepositorio!.Guardar(new Auditorias()
+            iAuditoriasRepositorio!.Guardar(new Auditorias()
             {
                 Nom_Entidad = "Postulaciones",
                 Entidad_id = entidad.Id,
@@ -50,7 +50,7 @@ namespace lib_repositorios.Implementaciones
             conexion!.Modificar(entidad);
             conexion!.GuardarCambios();
 
-            IAuditoriasRepositorio!.Modificar(new Auditorias()
+            iAuditoriasRepositorio!.Modificar(new Auditorias()
             {
                 Nom_Entidad = "Postulaciones",
                 Entidad_id = entidad.Id,
@@ -65,7 +65,7 @@ namespace lib_repositorios.Implementaciones
             conexion!.Borrar(entidad);
             conexion!.GuardarCambios();
 
-            IAuditoriasRepositorio!.Borrar(new Auditorias()
+            iAuditoriasRepositorio!.Borrar(new Auditorias()
             {
                 Nom_Entidad = "Postulaciones",
                 Entidad_id = entidad.Id,
