@@ -55,11 +55,11 @@ namespace lib_aplicaciones.Implementaciones
             switch (tipo.ToUpper())
             {
                 case "NOMBRE ENTIDAD": condiciones = x => x.Nom_Entidad!.Contains(entidad.Nom_Entidad!); break;
-                case "NOMBRE ACCION": condiciones = x => x._Accion!.Nombre == entidad._Accion!.Nombre; break;
+                case "NOMBRE ACCION": condiciones = x => x.Accion == entidad.Accion; break;
                 case "COMPLEJA":
                     condiciones =
                         x => x.Nom_Entidad!.Contains(entidad.Nom_Entidad!) ||
-                             x._Accion!.Nombre == entidad._Accion!.Nombre; break;
+                             x.Accion == entidad.Accion; break;
 
                 default: condiciones = x => x.Id == entidad.Id; break;
             }

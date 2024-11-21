@@ -1,20 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "oooY8llXRSg=",
+  "dgSpecHash": "80OyWtn4eU0=",
   "success": true,
-  "projectFilePath": "D:\\BolsaDeEmpleoFINAL\\lib_presentaciones\\lib_presentaciones.csproj",
-=======
-<<<<<<< HEAD
-  "dgSpecHash": "9bE27svBzgM=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Emune\\OneDrive\\Documentos\\Proyecto Programacion\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj",
-=======
-  "dgSpecHash": "fBTMtqJWutY=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\sofia\\OneDrive\\Documentos\\Proyecto programacion Bolsa de empleo\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj",
->>>>>>> 39af731a24d7089a292763dceb65b4c38749dc9b
->>>>>>> 1e1dbbb26d1ebde389a795657aadfe89312017be
+  "projectFilePath": "D:\\BolsaDeEmpleo-Final\\lib_presentaciones\\lib_presentaciones.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\BolsaDeEmpleo-Final\\lib_presentaciones\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

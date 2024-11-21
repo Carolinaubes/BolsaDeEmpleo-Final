@@ -15,7 +15,6 @@ namespace lib_repositorios
             optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
         }
 
-        protected DbSet<Acciones>? Acciones { get; set; }
         protected DbSet<Auditorias>? Auditorias { get; set; }
         protected DbSet<Cargos>? Cargos { get; set; }
         protected DbSet<Cargos_Estudios>? Cargos_Estudios { get; set; }
@@ -71,15 +70,6 @@ namespace lib_repositorios
             return this.Set<Postulaciones>()
                 .Include(x => x._Vacantes)
                 .Include(x => x._Personas)
-                .Where(condiciones)
-                .Take(tamaño)
-                .ToList();
-        }
-
-        public virtual List<Auditorias> Buscar(Expression<Func<Auditorias, bool>> condiciones)
-        {
-            return this.Set<Auditorias>()
-                .Include(x => x._Accion)
                 .Where(condiciones)
                 .Take(tamaño)
                 .ToList();

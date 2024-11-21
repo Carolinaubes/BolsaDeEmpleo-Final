@@ -1090,7 +1090,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "lib_entidades": "1.0.0"
+          "lib_entidades": "1.0.0",
+          "lib_repositorios": "1.0.0",
+          "lib_utilidades": "1.0.0"
         },
         "compile": {
           "bin/placeholder/lib_aplicaciones.dll": {}
@@ -3257,11 +3259,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj",
+      "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
       "projectName": "asp_servicios",
-      "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj",
+      "projectPath": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
       "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-      "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\obj\\",
+      "outputPath": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3279,17 +3281,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj": {
-              "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj"
+            "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj": {
+              "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj"
             },
-            "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj": {
-              "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj"
+            "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+              "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
             },
-            "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj": {
-              "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj"
+            "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
+              "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj"
             },
-            "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj": {
-              "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj"
+            "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
+              "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj"
             }
           }
         }

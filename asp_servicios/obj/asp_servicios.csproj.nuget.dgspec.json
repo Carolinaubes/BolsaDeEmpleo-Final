@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj": {}
+    "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj": {}
   },
   "projects": {
-    "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj": {
+    "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj",
+        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
         "projectName": "asp_servicios",
-        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj",
+        "projectPath": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
         "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\obj\\",
+        "outputPath": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,17 +29,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj"
+              "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj"
               },
-              "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj"
+              "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
               },
-              "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj"
+              "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj"
               },
-              "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj"
+              "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj"
               }
             }
           }
@@ -87,14 +87,14 @@
         }
       }
     },
-    "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj": {
+    "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj",
+        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
         "projectName": "lib_aplicaciones",
-        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\lib_aplicaciones.csproj",
+        "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
         "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_aplicaciones\\obj\\",
+        "outputPath": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -112,8 +112,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj"
+              "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
+              },
+              "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj"
+              },
+              "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj"
               }
             }
           }
@@ -152,14 +158,14 @@
         }
       }
     },
-    "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj": {
+    "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj",
+        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
         "projectName": "lib_entidades",
-        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj",
+        "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
         "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\obj\\",
+        "outputPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -213,14 +219,14 @@
         }
       }
     },
-    "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj": {
+    "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj",
+        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj",
         "projectName": "lib_repositorios",
-        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\lib_repositorios.csproj",
+        "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj",
         "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_repositorios\\obj\\",
+        "outputPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -238,8 +244,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_entidades\\lib_entidades.csproj"
+              "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
               }
             }
           }
@@ -284,14 +290,14 @@
         }
       }
     },
-    "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj": {
+    "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj",
+        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj",
         "projectName": "lib_utilidades",
-        "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj",
+        "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj",
         "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\obj\\",
+        "outputPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",

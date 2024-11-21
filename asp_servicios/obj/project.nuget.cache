@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QfirhkBR4pc=",
+  "dgSpecHash": "FM8gqKZs35A=",
   "success": true,
-  "projectFilePath": "D:\\BolsaDeEmpleo-FINALLL\\asp_servicios\\asp_servicios.csproj",
+  "projectFilePath": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Janus\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Janus\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

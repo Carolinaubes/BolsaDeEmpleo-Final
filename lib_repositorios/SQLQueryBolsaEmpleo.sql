@@ -90,12 +90,6 @@ CREATE TABLE Postulaciones( --Tabla Postulaciones
 );
 go
 
-CREATE TABLE Acciones( --Tabla Acciones
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	nombre NVARCHAR(100) NOT NULL
-);
-go
-
 CREATE TABLE Auditorias( --Tabla Auditorias
 	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
 	nom_Entidad NVARCHAR(100) NOT NULL,

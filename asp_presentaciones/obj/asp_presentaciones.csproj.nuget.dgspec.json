@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erian\\Source\\Repos\\BolsaDeEmpleo-Final\\asp_presentaciones\\asp_presentaciones.csproj": {}
+    "D:\\BolsaDeEmpleo-Final\\asp_presentaciones\\asp_presentaciones.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erian\\Source\\Repos\\BolsaDeEmpleo-Final\\asp_presentaciones\\asp_presentaciones.csproj": {
+    "D:\\BolsaDeEmpleo-Final\\asp_presentaciones\\asp_presentaciones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erian\\Source\\Repos\\BolsaDeEmpleo-Final\\asp_presentaciones\\asp_presentaciones.csproj",
+        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\asp_presentaciones\\asp_presentaciones.csproj",
         "projectName": "asp_presentaciones",
-        "projectPath": "C:\\Users\\erian\\Source\\Repos\\BolsaDeEmpleo-Final\\asp_presentaciones\\asp_presentaciones.csproj",
-        "packagesPath": "C:\\Users\\erian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erian\\Source\\Repos\\BolsaDeEmpleo-Final\\asp_presentaciones\\obj\\",
+        "projectPath": "D:\\BolsaDeEmpleo-Final\\asp_presentaciones\\asp_presentaciones.csproj",
+        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
+        "outputPath": "D:\\BolsaDeEmpleo-Final\\asp_presentaciones\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\erian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
