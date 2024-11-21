@@ -6,4 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+	<ProjectReference Include="..\lib_entidades\lib_entidades.csproj" />
+	<ProjectReference Include="..\lib_comunicaciones\lib_comunicaciones.csproj" />
+	<ProjectReference Include="..\lib_utilidades\lib_utilidades.csproj" />
+	  <ProjectReference Include="..\lib_presentaciones\lib_presentaciones.csproj" />
+  </ItemGroup>
+	
 </Project>
