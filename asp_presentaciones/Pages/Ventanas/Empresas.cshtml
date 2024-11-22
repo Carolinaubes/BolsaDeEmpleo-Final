@@ -96,14 +96,11 @@
                         <label class="col-lg-4 control-label">
                             Rol
                         </label>
-                            @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Editar)
-                            {
-                                <div class="col-lg-6">
-                                    <input id="nmRol"
-                                           class="cts_forms form-control"
-                                           asp-for="@Model.Actual!.Rol_id" />
-                                </div>
-                            }      
+                        <div class="col-lg-6">
+                            <input id="nmRol"
+                            class="cts_forms form-control"
+                            asp-for="@Model.Actual!.Rol_id" />
+                        </div>      
                     </div>
                 </div>
             </div>

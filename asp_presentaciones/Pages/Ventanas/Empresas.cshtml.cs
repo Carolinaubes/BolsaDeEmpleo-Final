@@ -3,6 +3,7 @@ using lib_presentaciones.Interfaces;
 using lib_utilidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Reflection;
 
 namespace asp_presentaciones.Pages.Ventanas
 {
