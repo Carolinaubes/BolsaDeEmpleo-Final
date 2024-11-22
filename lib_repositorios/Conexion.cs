@@ -55,6 +55,15 @@ namespace lib_repositorios
                 .ToList();
         }
 
+        public virtual List<Personas> Buscar(Expression<Func<Personas, bool>> condiciones)
+        {
+            return this.Set<Personas>()
+                .Include(x => x._Rol)
+                .Where(condiciones)
+                .Take(tamaño)
+                .ToList();
+        }
+
         public virtual List<Cargos_Estudios> Buscar(Expression<Func<Cargos_Estudios, bool>> condiciones)
         {
             return this.Set<Cargos_Estudios>()

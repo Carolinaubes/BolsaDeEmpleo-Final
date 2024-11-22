@@ -52,7 +52,7 @@
             <input type="hidden"
                    asp-for="@Model.Actual!.Direccion" />
             <input type="hidden"
-                   asp-for="@Model.Actual!._Rol!.Nombre" />
+                   asp-for="@Model.Actual!.Rol_id" />
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Editar)
@@ -91,17 +91,31 @@
                                    asp-for="@Model.Actual!.Direccion" />
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-4 control-label">
+                            Rol
+                        </label>
+                            @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Editar)
+                            {
+                                <div class="col-lg-6">
+                                    <input id="nmRol"
+                                           class="cts_forms form-control"
+                                           asp-for="@Model.Actual!.Rol_id" />
+                                </div>
+                            }      
+                    </div>
                 </div>
             </div>
             }
 
-            @if (ViewData.ContainsKey("Mensaje"))
+            @* @if (ViewData.ContainsKey("Mensaje"))
             {
             <input type="hidden"
                    asp-for="@Model.Accion" />
             @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
                 ;
-            }
+            } *@
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
