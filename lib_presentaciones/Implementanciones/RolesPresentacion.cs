@@ -2,22 +2,21 @@
 using lib_entidades.Modelos;
 using lib_presentaciones.Interfaces;
 using lib_utilidades;
-using System.Text.Json.Serialization;
 
 namespace lib_presentaciones.Implementaciones
 {
-    public class EmpresasPresentacion : IEmpresasPresentacion
+    public class RolesPresentacion : IRolesPresentacion
     {
-        private IEmpresasComunicacion? iComunicacion = null;
+        private IRolesComunicacion? iComunicacion = null;
 
-        public EmpresasPresentacion(IEmpresasComunicacion iComunicacion)
+        public RolesPresentacion(IRolesComunicacion iComunicacion)
         {
             this.iComunicacion = iComunicacion;
         }
 
-        public async Task<List<Empresas>> Listar()
+        public async Task<List<Roles>> Listar()
         {
-            var lista = new List<Empresas>();
+            var lista = new List<Roles>();
             var datos = new Dictionary<string, object>();
 
             var respuesta = await iComunicacion!.Listar(datos);
@@ -25,14 +24,14 @@ namespace lib_presentaciones.Implementaciones
             {
                 throw new Exception(respuesta["Error"].ToString()!);
             }
-            lista = JsonConversor.ConvertirAObjeto<List<Empresas>>(
+            lista = JsonConversor.ConvertirAObjeto<List<Roles>>(
                 JsonConversor.ConvertirAString(respuesta["Entidades"]));
             return lista;
         }
 
-        public async Task<List<Empresas>> Buscar(Empresas entidad, string tipo)
+        public async Task<List<Roles>> Buscar(Roles entidad, string tipo)
         {
-            var lista = new List<Empresas>();
+            var lista = new List<Roles>();
             var datos = new Dictionary<string, object>();
             datos["Entidad"] = entidad;
             datos["Tipo"] = tipo;
@@ -42,12 +41,12 @@ namespace lib_presentaciones.Implementaciones
             {
                 throw new Exception(respuesta["Error"].ToString()!);
             }
-            lista = JsonConversor.ConvertirAObjeto<List<Empresas>>(
+            lista = JsonConversor.ConvertirAObjeto<List<Roles>>(
                 JsonConversor.ConvertirAString(respuesta["Entidades"]));
             return lista;
         }
 
-        public async Task<Empresas> Guardar(Empresas entidad)
+        public async Task<Roles> Guardar(Roles entidad)
         {
             if (entidad.Id != 0 || !entidad.Validar())
             {
@@ -62,12 +61,12 @@ namespace lib_presentaciones.Implementaciones
             {
                 throw new Exception(respuesta["Error"].ToString()!);
             }
-            entidad = JsonConversor.ConvertirAObjeto<Empresas>(
+            entidad = JsonConversor.ConvertirAObjeto<Roles>(
                 JsonConversor.ConvertirAString(respuesta["Entidad"]));
             return entidad;
         }
 
-        public async Task<Empresas> Modificar(Empresas entidad)
+        public async Task<Roles> Modificar(Roles entidad)
         {
             if (entidad.Id == 0 || !entidad.Validar())
             {
@@ -77,17 +76,17 @@ namespace lib_presentaciones.Implementaciones
             var datos = new Dictionary<string, object>();
             datos["Entidad"] = entidad;
 
-            var respuesta = await iComunicacion!.Modificar(datos); //Comunicaciones manda el error
+            var respuesta = await iComunicacion!.Modificar(datos);
             if (respuesta.ContainsKey("Error"))
             {
                 throw new Exception(respuesta["Error"].ToString()!);
             }
-            entidad = JsonConversor.ConvertirAObjeto<Empresas>(
+            entidad = JsonConversor.ConvertirAObjeto<Roles>(
                 JsonConversor.ConvertirAString(respuesta["Entidad"]));
             return entidad;
         }
 
-        public async Task<Empresas> Borrar(Empresas entidad)
+        public async Task<Roles> Borrar(Roles entidad)
         {
             if (entidad.Id == 0 || !entidad.Validar())
             {
@@ -102,7 +101,7 @@ namespace lib_presentaciones.Implementaciones
             {
                 throw new Exception(respuesta["Error"].ToString()!);
             }
-            entidad = JsonConversor.ConvertirAObjeto<Empresas>(
+            entidad = JsonConversor.ConvertirAObjeto<Roles>(
                 JsonConversor.ConvertirAString(respuesta["Entidad"]));
             return entidad;
         }

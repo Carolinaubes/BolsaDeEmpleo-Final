@@ -3,21 +3,23 @@ using lib_presentaciones.Interfaces;
 using lib_utilidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Reflection;
 
 namespace asp_presentaciones.Pages.Ventanas
 {
     public class EmpresasModel : PageModel
     {
         private IEmpresasPresentacion? iPresentacion = null;
+        private IRolesPresentacion iRolesPresentacion = null;
 
-        public EmpresasModel(IEmpresasPresentacion iPresentacion)
+        public EmpresasModel(IEmpresasPresentacion iPresentacion, IRolesPresentacion iRolesPresentacion)
         {
             try
             {
                 this.iPresentacion = iPresentacion;
-                Filtro = new Empresas();
-                //_Rol = new Roles();
+                this.iRolesPresentacion = iRolesPresentacion;
+                Filtro = new Empresas(); /*{
+                    _Rol = new Roles()
+                }*/
             }
             catch (Exception ex)
             {
@@ -30,6 +32,7 @@ namespace asp_presentaciones.Pages.Ventanas
         [BindProperty] public Empresas? Filtro { get; set; }
         [BindProperty] public List<Empresas>? Lista { get; set; }
         [BindProperty] public Roles? _Rol { get; set; }
+        [BindProperty] public List<Roles>? roles { get; set; }
 
         public virtual void OnGet()
         {
@@ -46,6 +49,7 @@ namespace asp_presentaciones.Pages.Ventanas
                 var task = this.iPresentacion!.Buscar(Filtro!, "NOMBRE");
                 task.Wait();
                 Lista = task.Result;
+                CargarCombox();
                 Actual = null;
             }
             catch (Exception ex)
@@ -59,6 +63,7 @@ namespace asp_presentaciones.Pages.Ventanas
             try
             {
                 Accion = Enumerables.Ventanas.Editar;
+                CargarCombox();
                 Actual = new Empresas();
             }
             catch (Exception ex)
@@ -149,6 +154,23 @@ namespace asp_presentaciones.Pages.Ventanas
             {
                 if (Accion == Enumerables.Ventanas.Listas)
                     OnPostBtRefrescar();
+            }
+            catch (Exception ex)
+            {
+                LogConversor.Log(ex, ViewData!);
+            }
+        }
+
+        public void CargarCombox()
+        {
+            try
+            {
+                if (!(roles == null || roles!.Count <= 0))
+                    return;
+
+                var task = this.iRolesPresentacion!.Listar();
+                task.Wait();
+                roles = task.Result;
             }
             catch (Exception ex)
             {

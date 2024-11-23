@@ -40,170 +40,172 @@
             @if (Model.Accion != lib_utilidades.Enumerables.Ventanas.Listas ||
             Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Id" />
+                <input type="hidden"
+                       asp-for="@Model.Actual!.Id" />
             }
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Cod_empresa" />
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Nombre" />
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Direccion" />
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Rol_id" />
+                <input type="hidden"
+                       asp-for="@Model.Actual!.Cod_empresa" />
+                <input type="hidden"
+                       asp-for="@Model.Actual!.Nombre" />
+                <input type="hidden"
+                       asp-for="@Model.Actual!.Direccion" />
+                <input type="hidden"
+                       asp-for="@Model.Actual!.Rol_id" />
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Editar)
             {
-            <div class="containers_vn panel panel-default">
-                <h3>Empresa</h3>
+                <div class="containers_vn panel panel-default">
+                    <h3>Empresas</h3>
 
-                <div>
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Cod_Empresa
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmCod_Empresa"
-                                   class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Cod_empresa" />
+                    <div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">
+                                Codigo de Empresa
+                            </label>
+                            <div class="col-lg-6">
+                                <input id="nmCod_Empresa"
+                                       class="cts_forms form-control"
+                                       asp-for="@Model.Actual!.Cod_empresa" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Nombre
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmNombre"
-                                   class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Nombre" />
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">
+                                Nombre
+                            </label>
+                            <div class="col-lg-6">
+                                <input id="nmNombre"
+                                       class="cts_forms form-control"
+                                       asp-for="@Model.Actual!.Nombre" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Direccion
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmDireccion"
-                                   class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Direccion" />
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">
+                                Direccion
+                            </label>
+                            <div class="col-lg-6">
+                                <input id="nmDireccion"
+                                       class="cts_forms form-control"
+                                       asp-for="@Model.Actual!.Direccion" />
+                            </div>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">
+                                Rol
+                            </label>
+                            <div class="col-lg-6">
+                                <input id="nmEstudio" 
+                                       class="cts_forms form-control"
+                                       asp-for="@Model.Actual!.Rol_id" />
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Rol
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmRol"
-                            class="cts_forms form-control"
-                            asp-for="@Model.Actual!.Rol_id" />
-                        </div>      
                     </div>
                 </div>
-            </div>
             }
 
             @if (ViewData.ContainsKey("Mensaje"))
             {
-            <input type="hidden"
-                   asp-for="@Model.Accion" />
-            @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
+                <input type="hidden"
+                       asp-for="@Model.Accion" />
+                @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
                 ;
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
-            <div class='popup'>
-                <div class='pp_del_inner'>
-                    <div style='width:95%'>
-                        <h2 align="left">
-                            Mensaje
-                        </h2>
+                <div class='popup'>
+                    <div class='pp_del_inner'>
+                        <div style='width:95%'>
+                            <h2 align="left">
+                                Mensaje
+                            </h2>
 
-                        <h4 align="left">
-                            Desea borrar la entidad?
-                        </h4>
-                        <h6 align="left">
-                            @Model.Actual!.Nombre
-                        </h6>
-                        <br />
-                        <br />
-                        <input type="submit"
-                               value="Borrar"
-                               asp-page-handler="BtBorrar"
-                               class="btn btn-secondary" />
-                        <input type="submit"
-                               value="Cerrar"
-                               asp-page-handler="BtCancelar"
-                               class="btn btn-secondary" />
+                            <h4 align="left">
+                                Desea borrar la entidad?
+                            </h4>
+                            <h6 align="left">
+                                @Model.Actual!.Nombre
+                            </h6>
+                            <br />
+                            <br />
+                            <input type="submit"
+                                   value="Borrar"
+                                   asp-page-handler="BtBorrar"
+                                   class="btn btn-secondary" />
+                            <input type="submit"
+                                   value="Cerrar"
+                                   asp-page-handler="BtCancelar"
+                                   class="btn btn-secondary" />
+                        </div>
                     </div>
                 </div>
-            </div>
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Listas ||
             Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
-            <input id="flNombre"
-                   class="cts_forms form-control"
-                   asp-for="@Model.Filtro!.Nombre"
-                   placeholder="Nombre" />
-            <br />
+                <input id="flNombre"
+                       class="cts_forms form-control"
+                       asp-for="@Model.Filtro!.Nombre"
+                       placeholder="Empresa" />
+                <br />
 
-            <div class="containers_vn panel panel-default">
-                <table class="tb_data table table-striped table-bordered table-hover">
-                    <tr>
-                        <th class="cl_hidden">
-                            Cod_empresa
-                        </th>
-                        <th class="cl_hidden">
-                            Nombre
-                        </th>
-                        <th class="cl_hidden">
-                            Direccion
-                        </th>
-                        <th class="cl_hidden">
-                            Rol
-                        </th>
-                    </tr>
-                    @if (Model != null && Model.Lista != null)
+                <div class="containers_vn panel panel-default">
+                    <table class="tb_data table table-striped table-bordered table-hover">
+                        <tr>
+                            <th>
+                                Cod_Empresa
+                            </th>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                Direccion
+                            </th>
+                            <th>
+                                Rol
+                            </th>
+
+                        </tr>
+                        @if (Model != null && Model.Lista != null)
                         {
-                    @foreach (var elemento in Model.Lista)
+                            @foreach (var elemento in Model.Lista)
                             {
-                    <tr>
-                        <td>
-                            @elemento.Cod_empresa
-                        </td>
-                        <td>
-                            @elemento.Nombre
-                        </td>
-                        <td class="cl_hidden">
-                            @elemento.Direccion
-                        </td>
-                        <td class="cl_hidden">
-                            @elemento._Rol!.Nombre
-                        </td>
-                        <td>
-                            <input type="submit"
-                                   value="Modicar"
-                                   asp-page-handler="BtModificar"
-                                   class="btn btn-secondary"
-                                   asp-route-data="@elemento.Id" />
-                            <input type="submit"
-                                   value="Borrar"
-                                   asp-page-handler="BtBorrarVal"
-                                   class="btn btn-secondary"
-                                   asp-route-data="@elemento.Id" />
-                        </td>
-                    </tr>
+                                <tr>
+                                    <td>
+                                        @elemento.Cod_empresa
+                                    </td>
+                                    <td>
+                                        @elemento.Nombre
+                                    </td>
+                                    <td>
+                                        @elemento.Direccion
+                                    </td>
+                                    <td>
+                                        @elemento.Rol_id
+                                    </td>
+                                    <td>
+                                        <input type="submit"
+                                               value="Modicar"
+                                               asp-page-handler="BtModificar"
+                                               class="btn btn-secondary"
+                                               asp-route-data="@elemento.Id" />
+                                        <input type="submit"
+                                               value="Borrar"
+                                               asp-page-handler="BtBorrarVal"
+                                               class="btn btn-secondary"
+                                               asp-route-data="@elemento.Id" />
+                                    </td>
+                                </tr>
                             }
                         }
-                </table>
-            </div>
+                    </table>
+                </div>
             }
         </form>
     </div>
 </center>
+

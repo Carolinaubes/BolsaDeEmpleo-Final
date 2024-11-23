@@ -35,10 +35,10 @@ namespace asp_presentaciones.Pages.Ventanas
         {
             try
             {
-                Filtro!.Nom_Entidad = Filtro!.Nom_Entidad ?? "";
+                Filtro!.Accion = Filtro!.Accion ?? "";
 
                 Accion = Enumerables.Ventanas.Listas;
-                var task = this.iPresentacion!.Buscar(Filtro!, "NOMBRE ENTIDAD");
+                var task = this.iPresentacion!.Buscar(Filtro!, "NOMBRE ACCION");
                 task.Wait();
                 Lista = task.Result;
                 Actual = null;

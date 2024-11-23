@@ -1,4 +1,4 @@
-﻿@*@page
+﻿@page
 @model asp_presentaciones.Pages.Ventanas.EstudiosModel
 @{
     ViewData["Titulo"] = "Estudios";
@@ -11,7 +11,7 @@
             @Html.AntiForgeryToken()
 
             <div align="left">
-                <h3>Empresas</h3>
+                <h3>Estudios</h3>
             </div>
             <div align="left"
                  class="bt_panel_buttons">
@@ -48,19 +48,13 @@
             <input type="hidden"
                    asp-for="@Model.Actual!.Nombre" />
             <input type="hidden"
-                   asp-for="@Model.Actual!.Direccion" />
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Telefono" />
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Fecha" />
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Activa" />
+                   asp-for="@Model.Actual!.Cod_estudio" />
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Editar)
             {
             <div class="containers_vn panel panel-default">
-                <h3>Casa</h3>
+                <h3>Estudio</h3>
 
                 <div>
                     <div class="form-group">
@@ -75,44 +69,15 @@
                     </div>
                     <div class="form-group">
                         <label class="col-lg-4 control-label">
-                            Direccion
+                            Cod_estudio
                         </label>
                         <div class="col-lg-6">
-                            <input id="nmDireccion"
+                            <input id="nmCod_estudio"
                                    class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Direccion" />
+                                   asp-for="@Model.Actual!.Cod_estudio" />
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Telefono
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmTelefono"
-                                   class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Telefono" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Fecha
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmFecha"
-                                   class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Fecha" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Activa
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmActiva"
-                                   type="checkbox"
-                                   asp-for="@Model.Actual!.Activa" />
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             }
@@ -168,22 +133,10 @@
                 <table class="tb_data table table-striped table-bordered table-hover">
                     <tr>
                         <th>
+                            Cod_estudio
+                        </th>
+                        <th class="cl_hidden">
                             Nombre
-                        </th>
-                        <th class="cl_hidden">
-                            Direccion
-                        </th>
-                        <th class="cl_hidden">
-                            Telefono
-                        </th>
-                        <th>
-                            Fecha
-                        </th>
-                        <th class="cl_hidden">
-                            Activa
-                        </th>
-                        <th class="cl_actions">
-                            Accion
                         </th>
                     </tr>
                     @if (Model != null && Model.Lista != null)
@@ -192,19 +145,10 @@
                             {
                     <tr>
                         <td>
+                            @elemento.Cod_estudio
+                        </td>
+                        <td class="cl_hidden">
                             @elemento.Nombre
-                        </td>
-                        <td class="cl_hidden">
-                            @elemento.Direccion
-                        </td>
-                        <td class="cl_hidden">
-                            @elemento.Telefono
-                        </td>
-                        <td>
-                            @elemento.Fecha
-                        </td>
-                        <td class="cl_hidden">
-                            @elemento.Activa
                         </td>
                         <td>
                             <input type="submit"
@@ -226,4 +170,4 @@
             }
         </form>
     </div>
-</center>*@
+</center>

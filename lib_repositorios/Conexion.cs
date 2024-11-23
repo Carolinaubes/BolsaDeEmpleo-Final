@@ -119,7 +119,7 @@ namespace lib_repositorios
             var entry = this.Entry(entidad);
             entry.State = EntityState.Modified;
         }
-
+    
         public virtual void Borrar<T>(T entidad) where T : class, new()
         {
             this.Set<T>().Remove(entidad);

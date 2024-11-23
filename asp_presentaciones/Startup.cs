@@ -25,7 +25,8 @@ namespace asp_presentacion
             services.AddScoped<IEmpresasComunicacion, EmpresasComunicacion>();
             services.AddScoped<ICargos_EstudiosComunicacion, Cargos_EstudiosComunicacion>();
             services.AddScoped<ICargosComunicacion, CargosComunicacion>();
-            services.AddScoped<IAuditoriasComunicacion, AuditoriasComunicacion>(); 
+            services.AddScoped<IAuditoriasComunicacion, AuditoriasComunicacion>();
+            services.AddScoped<IRolesComunicacion, RolesComunicacion>();
 
             // Presentaciones
             services.AddScoped<IVacantesPresentacion, VacantesPresentacion>();
@@ -37,6 +38,7 @@ namespace asp_presentacion
             services.AddScoped<ICargos_EstudiosPresentacion, Cargos_EstudiosPresentacion>();
             services.AddScoped<ICargosPresentacion, CargosPresentacion>();
             services.AddScoped<IAuditoriasPresentacion, AuditoriasPresentacion>(); 
+            services.AddScoped<IRolesPresentacion, RolesPresentacion>();
 
             services.AddControllers();
             services.AddEndpointsApiExplorer();

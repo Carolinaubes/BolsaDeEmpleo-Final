@@ -1,4 +1,4 @@
-﻿@*@page
+﻿@page
 @model asp_presentaciones.Pages.Ventanas.PersonasModel
 @{
     ViewData["Titulo"] = "Personas";
@@ -11,7 +11,7 @@
             @Html.AntiForgeryToken()
 
             <div align="left">
-                <h3>Empresas</h3>
+                <h3>Personas</h3>
             </div>
             <div align="left"
                  class="bt_panel_buttons">
@@ -46,23 +46,32 @@
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
             <input type="hidden"
+                   asp-for="@Model.Actual!.Cedula" />
+            <input type="hidden"
                    asp-for="@Model.Actual!.Nombre" />
             <input type="hidden"
                    asp-for="@Model.Actual!.Direccion" />
             <input type="hidden"
-                   asp-for="@Model.Actual!.Telefono" />
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Fecha" />
-            <input type="hidden"
-                   asp-for="@Model.Actual!.Activa" />
+                   asp-for="@Model.Actual!.Rol_id" />
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Editar)
             {
             <div class="containers_vn panel panel-default">
-                <h3>Casa</h3>
+                <h3>Personas</h3>
 
                 <div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">
+                                Cedula
+                            </label>
+                            <div class="col-lg-6">
+                                <input id="nmCedula"
+                                       class="cts_forms form-control"
+                                       asp-for="@Model.Actual!.Cedula" />
+                            </div>
+                        </div>
+
                     <div class="form-group">
                         <label class="col-lg-4 control-label">
                             Nombre
@@ -83,36 +92,18 @@
                                    asp-for="@Model.Actual!.Direccion" />
                         </div>
                     </div>
+
                     <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Telefono
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmTelefono"
-                                   class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Telefono" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Fecha
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmFecha"
-                                   class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Fecha" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">
-                            Activa
-                        </label>
-                        <div class="col-lg-6">
-                            <input id="nmActiva"
-                                   type="checkbox"
-                                   asp-for="@Model.Actual!.Activa" />
-                        </div>
-                    </div>
+                            <label class="col-lg-4 control-label">
+                                Rol
+                            </label>
+                            <div class="col-lg-6">
+                                <input id="nmRol"
+                                       class="cts_forms form-control"
+                                       asp-for="@Model.Actual!.Rol_id" />
+                            </div>
+                     </div>
+
                 </div>
             </div>
             }
@@ -168,23 +159,18 @@
                 <table class="tb_data table table-striped table-bordered table-hover">
                     <tr>
                         <th>
+                            Cedula
+                        </th>
+                        <th>
                             Nombre
                         </th>
                         <th class="cl_hidden">
                             Direccion
                         </th>
-                        <th class="cl_hidden">
-                            Telefono
-                        </th>
                         <th>
-                            Fecha
+                            Rol
                         </th>
-                        <th class="cl_hidden">
-                            Activa
-                        </th>
-                        <th class="cl_actions">
-                            Accion
-                        </th>
+                        
                     </tr>
                     @if (Model != null && Model.Lista != null)
                         {
@@ -192,20 +178,18 @@
                             {
                     <tr>
                         <td>
+                            @elemento.Cedula
+                        </td>
+                        <td>
                             @elemento.Nombre
                         </td>
                         <td class="cl_hidden">
                             @elemento.Direccion
                         </td>
                         <td class="cl_hidden">
-                            @elemento.Telefono
+                            @elemento._Rol!.Nombre
                         </td>
-                        <td>
-                            @elemento.Fecha
-                        </td>
-                        <td class="cl_hidden">
-                            @elemento.Activa
-                        </td>
+
                         <td>
                             <input type="submit"
                                    value="Modicar"
@@ -221,9 +205,9 @@
                     </tr>
                             }
                         }
-                </table>
-            </div>
+                    </table>
+                </div>
             }
         </form>
     </div>
-</center>*@
+</center>
