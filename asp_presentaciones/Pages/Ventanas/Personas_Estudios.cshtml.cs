@@ -40,7 +40,13 @@ namespace asp_presentaciones.Pages.Ventanas
         {
             try
             {
-
+                var variable_session = HttpContext.Session.GetString("Usuario");
+                var variable_session2 = HttpContext.Session.GetString("Administrador");
+                if (String.IsNullOrEmpty(variable_session) && String.IsNullOrEmpty(variable_session2))
+                {
+                    HttpContext.Response.Redirect("/");
+                    return;
+                }
                 Filtro!._Persona!.Cedula = Filtro!._Persona!.Cedula ?? ""; //El objeto llega vacio
                 //Filtro!.Persona_id = Filtro!.Persona_id; NO FUNCIONA
 

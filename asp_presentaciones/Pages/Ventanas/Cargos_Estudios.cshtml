@@ -1,4 +1,4 @@
-﻿@* @page
+﻿@page
 @model asp_presentaciones.Pages.Ventanas.Cargos_EstudiosModel
 @{
     ViewData["Titulo"] = "Cargos_Estudios";
@@ -43,41 +43,41 @@
                 <input type="hidden"
                        asp-for="@Model.Actual!.Id" />
             }
+
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
                 <input type="hidden"
-                       asp-for="@Model.Actual!.Nombre" />
+                       asp-for="@Model.Actual!.Cargo_id" />
                 <input type="hidden"
-                       asp-for="@Model.Actual!.Cod_estudio" />
+                       asp-for="@Model.Actual!.Estudio_id" />
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Editar)
             {
                 <div class="containers_vn panel panel-default">
-                    <h3>Estudio</h3>
+                    <h3>Cargos_Estudios</h3>
 
                     <div>
                         <div class="form-group">
                             <label class="col-lg-4 control-label">
-                                Nombre
+                                Cargo
                             </label>
                             <div class="col-lg-6">
                                 <input id="nmNombre"
                                        class="cts_forms form-control"
-                                       asp-for="@Model.Actual!.Nombre" />
+                                       asp-for="@Model.Actual!.Cargo_id" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-4 control-label">
-                                Cod_estudio
+                                Estudio
                             </label>
                             <div class="col-lg-6">
                                 <input id="nmCod_estudio"
                                        class="cts_forms form-control"
-                                       asp-for="@Model.Actual!.Cod_estudio" />
+                                       asp-for="@Model.Actual!.Estudio_id" />
                             </div>
                         </div>
-
                     </div>
                 </div>
             }
@@ -103,7 +103,7 @@
                                 Desea borrar la entidad?
                             </h4>
                             <h6 align="left">
-                                @Model.Actual!.Nombre
+                                @Model.Actual!.Cargo_id
                             </h6>
                             <br />
                             <br />
@@ -125,18 +125,18 @@
             {
                 <input id="flNombre"
                        class="cts_forms form-control"
-                       asp-for="@Model.Filtro!.Nombre"
-                       placeholder="Nombre" />
+                       asp-for="@Model.Filtro!._Cargo!.Nombre"
+                       placeholder="Cargo" />
                 <br />
 
                 <div class="containers_vn panel panel-default">
                     <table class="tb_data table table-striped table-bordered table-hover">
                         <tr>
                             <th>
-                                Cod_estudio
+                                Cargo
                             </th>
-                            <th class="cl_hidden">
-                                Nombre
+                            <th>
+                                Estudio
                             </th>
                         </tr>
                         @if (Model != null && Model.Lista != null)
@@ -145,10 +145,10 @@
                             {
                                 <tr>
                                     <td>
-                                        @elemento.Cod_estudio
+                                        @elemento._Cargo!.Nombre
                                     </td>
                                     <td class="cl_hidden">
-                                        @elemento.Nombre
+                                        @elemento._Estudio!.Nombre
                                     </td>
                                     <td>
                                         <input type="submit"
@@ -171,4 +171,3 @@
         </form>
     </div>
 </center>
- *@

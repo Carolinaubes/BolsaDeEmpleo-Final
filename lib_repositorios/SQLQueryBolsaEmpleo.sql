@@ -136,7 +136,6 @@ GO
 
 INSERT INTO Estudios(Cod_estudio,Nombre)
 VALUES (1,'Ingenieria');
-GO
 
 INSERT INTO Personas_Estudios(Persona_id,Estudio_id)
 VALUES (1,1);

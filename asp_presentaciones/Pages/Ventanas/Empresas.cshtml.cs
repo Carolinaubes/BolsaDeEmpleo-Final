@@ -17,9 +17,10 @@ namespace asp_presentaciones.Pages.Ventanas
             {
                 this.iPresentacion = iPresentacion;
                 this.iRolesPresentacion = iRolesPresentacion;
-                Filtro = new Empresas(); /*{
+                Filtro = new Empresas()
+                {
                     _Rol = new Roles()
-                }*/
+                };
             }
             catch (Exception ex)
             {
@@ -43,6 +44,14 @@ namespace asp_presentaciones.Pages.Ventanas
         {
             try
             {
+                var variable_session = HttpContext.Session.GetString("Empresa");
+                var variable_session2 = HttpContext.Session.GetString("Administrador");
+                if (String.IsNullOrEmpty(variable_session) && String.IsNullOrEmpty(variable_session2))
+                {
+                    HttpContext.Response.Redirect("/");
+                    return;
+                }
+
                 Filtro!.Nombre = Filtro!.Nombre ?? "";
 
                 Accion = Enumerables.Ventanas.Listas;
@@ -64,7 +73,10 @@ namespace asp_presentaciones.Pages.Ventanas
             {
                 Accion = Enumerables.Ventanas.Editar;
                 CargarCombox();
-                Actual = new Empresas();
+                Actual = new Empresas() 
+                { 
+                    _Rol = new Roles() 
+                };
             }
             catch (Exception ex)
             {

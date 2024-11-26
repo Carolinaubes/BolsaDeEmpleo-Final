@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj",
+      "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj",
       "projectName": "lib_utilidades",
-      "projectPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\lib_utilidades.csproj",
+      "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj",
       "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-      "outputPath": "D:\\BolsaDeEmpleo-FINALLL\\lib_utilidades\\obj\\",
+      "outputPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -34,6 +34,15 @@ namespace asp_presentaciones.Pages.Ventanas
         {
             try
             {
+                var variable_session = HttpContext.Session.GetString("Usuario");
+                var variable_session2 = HttpContext.Session.GetString("Empresa");
+                var variable_session3 = HttpContext.Session.GetString("Administrador");
+
+                if (String.IsNullOrEmpty(variable_session) && String.IsNullOrEmpty(variable_session2) && String.IsNullOrEmpty(variable_session3))
+                {
+                    HttpContext.Response.Redirect("/");
+                    return;
+                }
                 Filtro!.Nombre = Filtro!.Nombre ?? "";
 
                 Accion = Enumerables.Ventanas.Listas;

@@ -92,6 +92,14 @@ namespace asp_presentaciones.Pages
                     OnPostBtClean();
                     return;
                 }
+                if (Email == "Administrador" && Contraseña == "3312")
+                {
+                    ViewData["Logged"] = true;
+                    HttpContext.Session.SetString("Administrador", Email!);
+                    EstaLogueado = true;
+                    OnPostBtClean();
+                    return;
+                }
                 //Si mete contraseña o email incorrectos
                 OnPostBtClean();
             }

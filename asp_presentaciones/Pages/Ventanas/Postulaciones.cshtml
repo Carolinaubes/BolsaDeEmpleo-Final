@@ -1,8 +1,9 @@
-﻿@* @page
+﻿@page
 @model asp_presentaciones.Pages.Ventanas.PostulacionesModel
 @{
     ViewData["Titulo"] = "Postulaciones";
 }
+
 <center>
     <div>
         <form method="POST"
@@ -45,72 +46,38 @@
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
                 <input type="hidden"
-                       asp-for="@Model.Actual!._Personas!.Nombre" />
+                       asp-for="@Model.Actual!.Persona_id" />
                 <input type="hidden"
-                       asp-for="@Model.Actual!._Personas!.Cedula" />
-                <input type="hidden"
-                       asp-for="@Model.Actual!._Vacantes!._Empresa!.Cod_empresa" />
-                <input type="hidden"
-                       asp-for="@Model.Actual!._Vacantes!._Cargo!.Nombre" />
-                
+                       asp-for="@Model.Actual!.Vacante_id" />
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Editar)
             {
                 <div class="containers_vn panel panel-default">
-                    <h3>Casa</h3>
+                    <h3>Postulaciones</h3>
 
                     <div>
                         <div class="form-group">
                             <label class="col-lg-4 control-label">
-                                Nombre
+                                Persona
                             </label>
                             <div class="col-lg-6">
-                                <input id="nmNombre"
+                                <input id="nmPersona"
                                        class="cts_forms form-control"
-                                       asp-for="@Model.Actual!._Personas!.Nombre" />
+                                       asp-for="@Model.Actual!.Persona_id" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-4 control-label">
-                                Direccion
+                                Vacantes
                             </label>
                             <div class="col-lg-6">
-                                <input id="nmDireccion"
+                                <input id="nmVacante"
                                        class="cts_forms form-control"
-                                       asp-for="@Model.Actual!._Personas" />
+                                       asp-for="@Model.Actual!.Vacante_id" />
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">
-                                Telefono
-                            </label>
-                            <div class="col-lg-6">
-                                <input id="nmTelefono"
-                                       class="cts_forms form-control"
-                                       asp-for="@Model.Actual!.Telefono" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">
-                                Fecha
-                            </label>
-                            <div class="col-lg-6">
-                                <input id="nmFecha"
-                                       class="cts_forms form-control"
-                                       asp-for="@Model.Actual!.Fecha" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">
-                                Activa
-                            </label>
-                            <div class="col-lg-6">
-                                <input id="nmActiva"
-                                       type="checkbox"
-                                       asp-for="@Model.Actual!.Activa" />
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             }
@@ -136,7 +103,7 @@
                                 Desea borrar la entidad?
                             </h4>
                             <h6 align="left">
-                                @Model.Actual!.Nombre
+                                @Model.Actual!.Id
                             </h6>
                             <br />
                             <br />
@@ -158,31 +125,23 @@
             {
                 <input id="flNombre"
                        class="cts_forms form-control"
-                       asp-for="@Model.Filtro!.Nombre"
-                       placeholder="Nombre" />
+                       asp-for="@Model.Filtro!._Personas!.Cedula"
+                       placeholder="Persona" />
                 <br />
 
                 <div class="containers_vn panel panel-default">
                     <table class="tb_data table table-striped table-bordered table-hover">
                         <tr>
                             <th>
-                                Nombre
+                                Persona
                             </th>
-                            <th class="cl_hidden">
-                                Direccion
-                            </th>
-                            <th class="cl_hidden">
-                                Telefono
-                            </th>
+                            @* <th>
+                                Empresa
+                            </th> *@
                             <th>
-                                Fecha
+                                Cargo
                             </th>
-                            <th class="cl_hidden">
-                                Activa
-                            </th>
-                            <th class="cl_actions">
-                                Accion
-                            </th>
+
                         </tr>
                         @if (Model != null && Model.Lista != null)
 
@@ -191,20 +150,15 @@
                             {
                                 <tr>
                                     <td>
-                                        @elemento.Nombre
+                                        @elemento._Personas!.Cedula
                                     </td>
-                                    <td class="cl_hidden">
-                                        @elemento.Direccion
-                                    </td>
-                                    <td class="cl_hidden">
-                                        @elemento.Telefono
-                                    </td>
+                                    @* <td>
+                                        @elemento._Vacantes!._Empresa!.Nombre
+                                    </td> *@
                                     <td>
-                                        @elemento.Fecha
+                                        @elemento._Vacantes!._Cargo!.Nombre
                                     </td>
-                                    <td class="cl_hidden">
-                                        @elemento.Activa
-                                    </td>
+
                                     <td>
                                         <input type="submit"
                                                value="Modicar"
@@ -225,4 +179,4 @@
             }
         </form>
     </div>
-</center> *@
+</center>
