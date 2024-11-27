@@ -9,6 +9,8 @@ namespace asp_presentaciones.Pages.Ventanas
     public class VacantesModel : PageModel
     {
         private IVacantesPresentacion? iPresentacion = null;
+        private static int modif;
+        private static int IDBorrar;
 
         public VacantesModel(IVacantesPresentacion iPresentacion)
         {
@@ -51,6 +53,14 @@ namespace asp_presentaciones.Pages.Ventanas
                     HttpContext.Response.Redirect("/");
                     return;
                 }
+
+                Filtro = new Vacantes()
+                {
+                    _Cargo = new Cargos()
+                    //_Estudio = new Estudios(),
+
+                };
+
                 Filtro!._Cargo!.Nombre = Filtro!._Cargo!.Nombre ?? ""; //El objeto llega vacio
 
                 Accion = Enumerables.Ventanas.Listas;
@@ -70,14 +80,15 @@ namespace asp_presentaciones.Pages.Ventanas
             try
             {
                 Accion = Enumerables.Ventanas.Editar;
-                Actual = new Vacantes()
-                {
-                    _Empresa = new Empresas()
-                    {
-                        _Rol = new Roles()
-                    },
-                    _Cargo = new Cargos()
-                };
+                Actual = new Vacantes();
+                modif = 0;
+                //{
+                //    _Empresa = new Empresas()
+                //    {
+                //        _Rol = new Roles()
+                //    },
+                //    _Cargo = new Cargos()
+                //}
             }
             catch (Exception ex)
             {
@@ -92,6 +103,7 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Editar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
+                modif = Actual!.Id;
             }
             catch (Exception ex)
             {
@@ -105,6 +117,7 @@ namespace asp_presentaciones.Pages.Ventanas
             {
                 Accion = Enumerables.Ventanas.Editar;
                 Task<Vacantes>? task = null;
+                Actual!.Id = modif;
                 if (Actual!.Id == 0)
                     task = this.iPresentacion!.Guardar(Actual!);
                 else
@@ -127,6 +140,8 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Borrar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
+                IDBorrar = Actual!.Id;
+
             }
             catch (Exception ex)
             {
@@ -138,6 +153,7 @@ namespace asp_presentaciones.Pages.Ventanas
         {
             try
             {
+                Actual!.Id = IDBorrar;
                 var task = this.iPresentacion!.Borrar(Actual!);
                 Actual = task.Result;
                 OnPostBtRefrescar();

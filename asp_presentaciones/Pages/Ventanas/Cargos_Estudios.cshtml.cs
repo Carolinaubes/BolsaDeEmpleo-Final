@@ -1,3 +1,4 @@
+
 using lib_entidades.Modelos;
 using lib_presentaciones.Interfaces;
 using lib_utilidades;
@@ -9,7 +10,8 @@ namespace asp_presentaciones.Pages.Ventanas
     public class Cargos_EstudiosModel : PageModel
     {
         private ICargos_EstudiosPresentacion? iPresentacion = null;
-
+        private static int modif;
+        private static int IDBorrar;
         public Cargos_EstudiosModel(ICargos_EstudiosPresentacion iPresentacion)
         {
             try
@@ -18,9 +20,8 @@ namespace asp_presentaciones.Pages.Ventanas
                 Filtro = new Cargos_Estudios()
                 {
                     _Cargo = new Cargos(),
-                    _Estudio = new Estudios()
+                    _Estudio = new Estudios(),
                 };
-
             }
             catch (Exception ex)
             {
@@ -33,23 +34,31 @@ namespace asp_presentaciones.Pages.Ventanas
         [BindProperty] public Cargos_Estudios? Filtro { get; set; }
         [BindProperty] public List<Cargos_Estudios>? Lista { get; set; }
 
-
         public virtual void OnGet() { OnPostBtRefrescar(); }
 
         public void OnPostBtRefrescar()
         {
             try
             {
+                 //usuario 
+                //administrador
                 var variable_session = HttpContext.Session.GetString("Usuario");
                 var variable_session2 = HttpContext.Session.GetString("Administrador");
-
                 if (String.IsNullOrEmpty(variable_session) && String.IsNullOrEmpty(variable_session2))
                 {
                     HttpContext.Response.Redirect("/");
                     return;
                 }
-                //CAMBIAR ESTO
-                Filtro!._Cargo!.Nombre = Filtro!._Cargo!.Nombre ?? ""; //El objeto llega vacio
+
+                Filtro = new Cargos_Estudios()
+                {
+                    _Cargo = new Cargos()
+                    //_Estudio = new Estudios(),
+
+                };
+
+                Filtro!._Cargo!.Nombre= Filtro!._Cargo!.Nombre ?? ""; //El objeto llega vacio
+                //Filtro!.Persona_id = Filtro!.Persona_id; NO FUNCIONA
 
                 Accion = Enumerables.Ventanas.Listas;
                 var task = this.iPresentacion!.Buscar(Filtro!, "NOMBRE CARGO");
@@ -63,16 +72,14 @@ namespace asp_presentaciones.Pages.Ventanas
             }
         }
 
+        
         public virtual void OnPostBtNuevo()
         {
             try
             {
                 Accion = Enumerables.Ventanas.Editar;
-                Actual = new Cargos_Estudios()
-                {
-                    _Cargo = new Cargos(),
-                    _Estudio = new Estudios()
-                };
+                Actual = new Cargos_Estudios();
+                modif = 0;
             }
             catch (Exception ex)
             {
@@ -87,6 +94,7 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Editar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
+                modif = Actual!.Id;
             }
             catch (Exception ex)
             {
@@ -100,6 +108,7 @@ namespace asp_presentaciones.Pages.Ventanas
             {
                 Accion = Enumerables.Ventanas.Editar;
                 Task<Cargos_Estudios>? task = null;
+                Actual!.Id = modif;
                 if (Actual!.Id == 0)
                     task = this.iPresentacion!.Guardar(Actual!);
                 else
@@ -122,6 +131,8 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Borrar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
+                IDBorrar = Actual!.Id;
+
             }
             catch (Exception ex)
             {
@@ -129,11 +140,13 @@ namespace asp_presentaciones.Pages.Ventanas
             }
         }
 
+
         public virtual void OnPostBtBorrar()
         {
             try
             {
-                var task = this.iPresentacion!.Borrar(Actual!);
+                Actual!.Id = IDBorrar;
+                var task = this.iPresentacion!.Borrar(Actual);
                 Actual = task.Result;
                 OnPostBtRefrescar();
             }

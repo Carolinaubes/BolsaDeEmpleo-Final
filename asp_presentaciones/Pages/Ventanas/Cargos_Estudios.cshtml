@@ -62,7 +62,7 @@
                                 Cargo
                             </label>
                             <div class="col-lg-6">
-                                <input id="nmCargo"
+                                <input id="nmEmpresa_id"
                                        class="cts_forms form-control"
                                        asp-for="@Model.Actual!.Cargo_id" />
                             </div>
@@ -72,12 +72,11 @@
                                 Estudio
                             </label>
                             <div class="col-lg-6">
-                                <input id="nmEstudio"
+                                <input id="nmCargo_id"
                                        class="cts_forms form-control"
                                        asp-for="@Model.Actual!.Estudio_id" />
                             </div>
                         </div>
-
                     </div>
                 </div>
             }
@@ -103,7 +102,7 @@
                                 Desea borrar la entidad?
                             </h4>
                             <h6 align="left">
-                                @Model.Actual!.Cargo_id
+                                @Model.Actual!.Id
                             </h6>
                             <br />
                             <br />

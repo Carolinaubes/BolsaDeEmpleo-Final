@@ -9,6 +9,8 @@ namespace asp_presentaciones.Pages.Ventanas
     public class PostulacionesModel : PageModel
     {
         private IPostulacionesPresentacion? iPresentacion = null;
+        private static int modif;
+        private static int IDBorrar;
 
         public PostulacionesModel(IPostulacionesPresentacion iPresentacion)
         {
@@ -17,6 +19,10 @@ namespace asp_presentaciones.Pages.Ventanas
                 this.iPresentacion = iPresentacion;
                 Filtro = new Postulaciones()
                 {
+                    _Personas = new Personas()
+                    {
+                        _Rol = new Roles()
+                    },
                     _Vacantes = new Vacantes()
                     {
                         _Cargo = new Cargos(),
@@ -24,13 +30,8 @@ namespace asp_presentaciones.Pages.Ventanas
                         {
                             _Rol = new Roles()
                         }
-                    },
-                    _Personas = new Personas()
-                    {
-                        _Rol = new Roles()
                     }
                 };
-
             }
             catch (Exception ex)
             {
@@ -43,7 +44,6 @@ namespace asp_presentaciones.Pages.Ventanas
         [BindProperty] public Postulaciones? Filtro { get; set; }
         [BindProperty] public List<Postulaciones>? Lista { get; set; }
 
-
         public virtual void OnGet() { OnPostBtRefrescar(); }
 
         public void OnPostBtRefrescar()
@@ -51,15 +51,14 @@ namespace asp_presentaciones.Pages.Ventanas
             try
             {
                 var variable_session = HttpContext.Session.GetString("Usuario");
-                var variable_session2 = HttpContext.Session.GetString("Empresa");
-                var variable_session3 = HttpContext.Session.GetString("Administrador");
-                if (String.IsNullOrEmpty(variable_session) && String.IsNullOrEmpty(variable_session2) && String.IsNullOrEmpty(variable_session3))
+                var variable_session2 = HttpContext.Session.GetString("Administrador");
+                if (String.IsNullOrEmpty(variable_session) && String.IsNullOrEmpty(variable_session2))
                 {
                     HttpContext.Response.Redirect("/");
                     return;
                 }
-                Filtro!._Personas!.Cedula = Filtro!._Personas!.Cedula ?? ""; //El objeto llega vacio
-                //Filtro!.Persona_id = Filtro!.Persona_id; NO FUNCIONA
+
+                Filtro!._Personas!.Cedula = Filtro!._Personas!.Cedula ?? "";
 
                 Accion = Enumerables.Ventanas.Listas;
                 var task = this.iPresentacion!.Buscar(Filtro!, "CEDULA");
@@ -78,21 +77,21 @@ namespace asp_presentaciones.Pages.Ventanas
             try
             {
                 Accion = Enumerables.Ventanas.Editar;
-                Actual = new Postulaciones()
-                {
-                    _Vacantes = new Vacantes()
-                    {
-                        _Cargo = new Cargos(),
-                        _Empresa = new Empresas()
-                        {
-                            _Rol = new Roles()
-                        }
-                    },
-                    _Personas = new Personas()
-                    {
-                        _Rol = new Roles()
-                    }
-                };
+                Actual = new Postulaciones();
+                //{
+                //    //_Personas = new Personas()
+                //    //{
+                //    //    _Rol = new Roles()
+                //    //},
+                //    //_Vacantes = new Vacantes()
+                //    //{
+                //    //    _Cargo = new Cargos(),
+                //    //    _Empresa = new Empresas()
+                //    //    {
+                //    //        _Rol = new Roles()
+                //    //    }
+                //}
+                modif = 0;
             }
             catch (Exception ex)
             {
@@ -107,6 +106,7 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Editar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
+                modif = Actual!.Id;
             }
             catch (Exception ex)
             {
@@ -119,7 +119,9 @@ namespace asp_presentaciones.Pages.Ventanas
             try
             {
                 Accion = Enumerables.Ventanas.Editar;
+                
                 Task<Postulaciones>? task = null;
+                Actual!.Id = modif;
                 if (Actual!.Id == 0)
                     task = this.iPresentacion!.Guardar(Actual!);
                 else
@@ -142,6 +144,7 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Borrar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
+                IDBorrar = Actual!.Id;
             }
             catch (Exception ex)
             {
@@ -153,6 +156,7 @@ namespace asp_presentaciones.Pages.Ventanas
         {
             try
             {
+                Actual!.Id = IDBorrar;
                 var task = this.iPresentacion!.Borrar(Actual!);
                 Actual = task.Result;
                 OnPostBtRefrescar();
@@ -189,7 +193,17 @@ namespace asp_presentaciones.Pages.Ventanas
             }
         }
 
-
-
+        //public string ConvertirActivo(bool valor)
+        //{
+        //    try
+        //    {
+        //        return valor ? "Activo" : "Inactivo";
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        LogConversor.Log(ex, ViewData!);
+        //        return "Falso";
+        //    }
+        //}
     }
 }

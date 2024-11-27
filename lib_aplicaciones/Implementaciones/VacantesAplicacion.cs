@@ -56,10 +56,12 @@ namespace lib_aplicaciones.Implementaciones
             {
                 case "NOMBRE CARGO": condiciones = x => x._Cargo!.Nombre!.Contains(entidad._Cargo!.Nombre!); break;
                 case "CODIGO EMPRESA": condiciones = x => x._Empresa!.Cod_empresa == entidad._Empresa!.Cod_empresa; break;
+                case "NOMBRE EMPRESA": condiciones = x => x._Empresa!.Nombre!.Contains(entidad._Empresa!.Nombre!); break;
                 case "COMPLEJA":
                     condiciones =
                         x => x._Cargo!.Nombre!.Contains(entidad._Cargo!.Nombre!) ||
-                             x._Empresa!.Cod_empresa == entidad._Empresa!.Cod_empresa; break;
+                             x._Empresa!.Cod_empresa == entidad._Empresa!.Cod_empresa ||
+                             x._Empresa!.Nombre!.Contains(entidad._Empresa!.Nombre!); break;
                 default: condiciones = x => x.Id == entidad.Id; break;
             }
             return this.iRepositorio!.Buscar(condiciones);

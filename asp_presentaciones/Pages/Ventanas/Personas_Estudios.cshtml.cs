@@ -9,6 +9,8 @@ namespace asp_presentaciones.Pages.Ventanas
     public class Personas_EstudiosModel : PageModel
     {
         private IPersonas_EstudiosPresentacion? iPresentacion = null;
+        private static int modif;
+        private static int IDBorrar;
 
         public Personas_EstudiosModel(IPersonas_EstudiosPresentacion iPresentacion)
         {
@@ -47,6 +49,14 @@ namespace asp_presentaciones.Pages.Ventanas
                     HttpContext.Response.Redirect("/");
                     return;
                 }
+
+                Filtro = new Personas_Estudios()
+                {
+                    _Persona = new Personas()
+                    //_Estudio = new Estudios(),
+                    
+                };
+
                 Filtro!._Persona!.Cedula = Filtro!._Persona!.Cedula ?? ""; //El objeto llega vacio
                 //Filtro!.Persona_id = Filtro!.Persona_id; NO FUNCIONA
 
@@ -67,11 +77,8 @@ namespace asp_presentaciones.Pages.Ventanas
             try
             {
                 Accion = Enumerables.Ventanas.Editar;
-                Actual = new Personas_Estudios() 
-                {
-                    _Persona = new Personas(),
-                    _Estudio = new Estudios()
-                };
+                Actual = new Personas_Estudios();
+                modif = 0;
             }
             catch (Exception ex)
             {
@@ -86,6 +93,7 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Editar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
+                modif = Actual!.Id;
             }
             catch (Exception ex)
             {
@@ -99,6 +107,7 @@ namespace asp_presentaciones.Pages.Ventanas
             {
                 Accion = Enumerables.Ventanas.Editar;
                 Task<Personas_Estudios>? task = null;
+                Actual!.Id = modif;
                 if (Actual!.Id == 0)
                     task = this.iPresentacion!.Guardar(Actual!);
                 else
@@ -121,6 +130,7 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Borrar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
+                IDBorrar = Actual!.Id;
             }
             catch (Exception ex)
             {
@@ -132,6 +142,7 @@ namespace asp_presentaciones.Pages.Ventanas
         {
             try
             {
+                Actual!.Id = IDBorrar;
                 var task = this.iPresentacion!.Borrar(Actual!);
                 Actual = task.Result;
                 OnPostBtRefrescar();
