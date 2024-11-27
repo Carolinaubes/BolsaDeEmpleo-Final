@@ -43,7 +43,6 @@
                 <input type="hidden"
                        asp-for="@Model.Actual!.Id" />
             }
-
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
                 <input type="hidden"
@@ -63,7 +62,7 @@
                                 Cargo
                             </label>
                             <div class="col-lg-6">
-                                <input id="nmNombre"
+                                <input id="nmCargo"
                                        class="cts_forms form-control"
                                        asp-for="@Model.Actual!.Cargo_id" />
                             </div>
@@ -73,11 +72,12 @@
                                 Estudio
                             </label>
                             <div class="col-lg-6">
-                                <input id="nmCod_estudio"
+                                <input id="nmEstudio"
                                        class="cts_forms form-control"
                                        asp-for="@Model.Actual!.Estudio_id" />
                             </div>
                         </div>
+
                     </div>
                 </div>
             }
@@ -138,6 +138,7 @@
                             <th>
                                 Estudio
                             </th>
+
                         </tr>
                         @if (Model != null && Model.Lista != null)
                         {
@@ -147,9 +148,10 @@
                                     <td>
                                         @elemento._Cargo!.Nombre
                                     </td>
-                                    <td class="cl_hidden">
+                                    <td>
                                         @elemento._Estudio!.Nombre
                                     </td>
+
                                     <td>
                                         <input type="submit"
                                                value="Modicar"
@@ -171,3 +173,4 @@
         </form>
     </div>
 </center>
+

@@ -12,7 +12,6 @@ namespace asp_presentaciones.Pages.Ventanas
 
         public Cargos_EstudiosModel(ICargos_EstudiosPresentacion iPresentacion)
         {
-
             try
             {
                 this.iPresentacion = iPresentacion;
@@ -53,7 +52,7 @@ namespace asp_presentaciones.Pages.Ventanas
                 Filtro!._Cargo!.Nombre = Filtro!._Cargo!.Nombre ?? ""; //El objeto llega vacio
 
                 Accion = Enumerables.Ventanas.Listas;
-                var task = this.iPresentacion!.Buscar(Filtro!, "NOMBRE");
+                var task = this.iPresentacion!.Buscar(Filtro!, "NOMBRE CARGO");
                 task.Wait();
                 Lista = task.Result;
                 Actual = null;

@@ -62,7 +62,7 @@
                                 Empresa
                             </label>
                             <div class="col-lg-6">
-                                <input id="nmPersona"
+                                <input id="nmEmpresa"
                                        class="cts_forms form-control"
                                        asp-for="@Model.Actual!.Empresa_id" />
                             </div>
@@ -72,7 +72,7 @@
                                 Cargo
                             </label>
                             <div class="col-lg-6">
-                                <input id="nmEstudio"
+                                <input id="nmCargo"
                                        class="cts_forms form-control"
                                        asp-for="@Model.Actual!.Cargo_id" />
                             </div>
@@ -125,8 +125,8 @@
             {
                 <input id="flNombre"
                        class="cts_forms form-control"
-                       asp-for="@Model.Filtro!._Empresa!.Nombre"
-                       placeholder="Persona" />
+                       asp-for="@Model.Filtro!._Cargo!.Nombre"
+                       placeholder="Cargo" />
                 <br />
 
                 <div class="containers_vn panel panel-default">
