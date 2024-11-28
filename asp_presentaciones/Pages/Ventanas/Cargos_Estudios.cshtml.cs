@@ -1,4 +1,3 @@
-
 using lib_entidades.Modelos;
 using lib_presentaciones.Interfaces;
 using lib_utilidades;
@@ -10,18 +9,13 @@ namespace asp_presentaciones.Pages.Ventanas
     public class Cargos_EstudiosModel : PageModel
     {
         private ICargos_EstudiosPresentacion? iPresentacion = null;
-        private static int modif;
-        private static int IDBorrar;
+
         public Cargos_EstudiosModel(ICargos_EstudiosPresentacion iPresentacion)
         {
             try
             {
                 this.iPresentacion = iPresentacion;
-                Filtro = new Cargos_Estudios()
-                {
-                    _Cargo = new Cargos(),
-                    _Estudio = new Estudios(),
-                };
+                Filtro = new Cargos_Estudios();
             }
             catch (Exception ex)
             {
@@ -40,30 +34,13 @@ namespace asp_presentaciones.Pages.Ventanas
         {
             try
             {
-                 //usuario 
-                //administrador
-                var variable_session = HttpContext.Session.GetString("Usuario");
-                var variable_session2 = HttpContext.Session.GetString("Administrador");
-                if (String.IsNullOrEmpty(variable_session) && String.IsNullOrEmpty(variable_session2))
-                {
-                    HttpContext.Response.Redirect("/");
-                    return;
-                }
-
-                Filtro = new Cargos_Estudios()
-                {
-                    _Cargo = new Cargos()
-                    //_Estudio = new Estudios(),
-
-                };
-
-                Filtro!._Cargo!.Nombre= Filtro!._Cargo!.Nombre ?? ""; //El objeto llega vacio
-                //Filtro!.Persona_id = Filtro!.Persona_id; NO FUNCIONA
+                Filtro!._Cargo!.Nombre = Filtro!._Cargo!.Nombre ?? "";
 
                 Accion = Enumerables.Ventanas.Listas;
                 var task = this.iPresentacion!.Buscar(Filtro!, "NOMBRE CARGO");
                 task.Wait();
                 Lista = task.Result;
+                //CargarCombox();
                 Actual = null;
             }
             catch (Exception ex)
@@ -72,14 +49,13 @@ namespace asp_presentaciones.Pages.Ventanas
             }
         }
 
-        
         public virtual void OnPostBtNuevo()
         {
             try
             {
                 Accion = Enumerables.Ventanas.Editar;
+                //CargarCombox();
                 Actual = new Cargos_Estudios();
-                modif = 0;
             }
             catch (Exception ex)
             {
@@ -94,7 +70,7 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Editar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
-                modif = Actual!.Id;
+                //CargarCombox();
             }
             catch (Exception ex)
             {
@@ -102,17 +78,26 @@ namespace asp_presentaciones.Pages.Ventanas
             }
         }
 
-        public virtual void OnPostBtGuardar()
+        public virtual async Task<IActionResult> OnPostBtGuardarAsync()
         {
+            Accion = Enumerables.Ventanas.Editar;
+
+            if (Actual == null)
+            {
+                Actual = new Cargos_Estudios();
+            }
+
             try
             {
-                Accion = Enumerables.Ventanas.Editar;
                 Task<Cargos_Estudios>? task = null;
-                Actual!.Id = modif;
-                if (Actual!.Id == 0)
+                if (Actual.Id == 0)
+                {
                     task = this.iPresentacion!.Guardar(Actual!);
+                }
                 else
+                {
                     task = this.iPresentacion!.Modificar(Actual!);
+                }
                 task.Wait();
                 Actual = task.Result;
                 Accion = Enumerables.Ventanas.Listas;
@@ -122,6 +107,8 @@ namespace asp_presentaciones.Pages.Ventanas
             {
                 LogConversor.Log(ex, ViewData!);
             }
+
+            return RedirectToPage();
         }
 
         public virtual void OnPostBtBorrarVal(string data)
@@ -131,8 +118,6 @@ namespace asp_presentaciones.Pages.Ventanas
                 OnPostBtRefrescar();
                 Accion = Enumerables.Ventanas.Borrar;
                 Actual = Lista!.FirstOrDefault(x => x.Id.ToString() == data);
-                IDBorrar = Actual!.Id;
-
             }
             catch (Exception ex)
             {
@@ -140,13 +125,11 @@ namespace asp_presentaciones.Pages.Ventanas
             }
         }
 
-
         public virtual void OnPostBtBorrar()
         {
             try
             {
-                Actual!.Id = IDBorrar;
-                var task = this.iPresentacion!.Borrar(Actual);
+                var task = this.iPresentacion!.Borrar(Actual!);
                 Actual = task.Result;
                 OnPostBtRefrescar();
             }
@@ -181,5 +164,36 @@ namespace asp_presentaciones.Pages.Ventanas
                 LogConversor.Log(ex, ViewData!);
             }
         }
+
+        //public void CargarCombox()
+        //{
+        //    try
+        //    {
+        //        if (Productos == null || Productos!.Count <= 0)
+        //        {
+        //            var taskProductos = this.iProductosPresentacion!.Listar();
+        //            taskProductos.Wait();
+        //            Productos = taskProductos.Result;
+        //        }
+
+        //        if (Promociones == null || Promociones!.Count <= 0)
+        //        {
+        //            var taskPromociones = this.iPromocionesPresentacion!.Listar();
+        //            taskPromociones.Wait();
+        //            Promociones = taskPromociones.Result;
+        //        }
+
+        //        if (Imagenes == null || Imagenes!.Count <= 0)
+        //        {
+        //            var taskImagenes = this.iImagenesPresentacion!.Listar();
+        //            taskImagenes.Wait();
+        //            Imagenes = taskImagenes.Result;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        LogConversor.Log(ex, ViewData!);
+        //    }
+        //}
     }
 }

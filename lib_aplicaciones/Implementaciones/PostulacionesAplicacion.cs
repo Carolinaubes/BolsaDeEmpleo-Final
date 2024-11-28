@@ -54,14 +54,14 @@ namespace lib_aplicaciones.Implementaciones
             Expression<Func<Postulaciones, bool>>? condiciones = null;
             switch (tipo.ToUpper())
             {
-                case "CEDULA": condiciones = x => x._Personas!.Cedula!.Contains(entidad._Personas!.Cedula!); break;
-                case "NOMBRE CARGO": condiciones = x => x._Vacantes!._Cargo!.Nombre!.Contains(entidad._Vacantes!._Cargo!.Nombre!); break;
-                case "CODIGO EMPRESA": condiciones = x => x._Vacantes!._Empresa!.Cod_empresa== entidad._Vacantes!._Empresa!.Cod_empresa; break;
+                case "CEDULA": condiciones = x => x._Persona!.Cedula!.Contains(entidad._Persona!.Cedula!); break;
+                case "NOMBRE CARGO": condiciones = x => x._Vacante!._Cargo!.Nombre!.Contains(entidad._Vacante!._Cargo!.Nombre!); break;
+                case "CODIGO EMPRESA": condiciones = x => x._Vacante!._Empresa!.Cod_empresa== entidad._Vacante!._Empresa!.Cod_empresa; break;
                 case "COMPLEJA":
                     condiciones =
-                        x => x._Personas!.Cedula!.Contains(entidad._Personas!.Cedula!) ||
-                             x._Vacantes!._Cargo!.Nombre!.Contains(entidad._Vacantes!._Cargo!.Nombre!) ||
-                             x._Vacantes!._Empresa!.Cod_empresa == entidad._Vacantes!._Empresa!.Cod_empresa; break;
+                        x => x._Persona!.Cedula!.Contains(entidad._Persona!.Cedula!) ||
+                             x._Vacante!._Cargo!.Nombre!.Contains(entidad._Vacante!._Cargo!.Nombre!) ||
+                             x._Vacante!._Empresa!.Cod_empresa == entidad._Vacante!._Empresa!.Cod_empresa; break;
                 default: condiciones = x => x.Id == entidad.Id; break;
             }
             return this.iRepositorio!.Buscar(condiciones);

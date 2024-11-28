@@ -59,7 +59,7 @@ CREATE TABLE Personas_Estudios( --Tabla Personas_Estudios
 go
 
 CREATE TABLE Cargos_Estudios( --Tabla Cargos_Estudios 
-	id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
 	Cargo_id INT NOT NULL,
 	Estudio_id INT NOT NULL,
 

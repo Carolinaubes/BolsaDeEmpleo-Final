@@ -3,7 +3,6 @@
 @{
     ViewData["Titulo"] = "Postulaciones";
 }
-
 <center>
     <div>
         <form method="POST" enctype="multipart/form-data">
@@ -23,29 +22,37 @@
             {
                 <input type="hidden" asp-for="@Model.Actual!.Id" />
             }
+
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
-                <input type="hidden" asp-for="@Model.Actual!._Personas!.Nombre" />
-                <input type="hidden" asp-for="@Model.Actual!._Vacantes!._Cargo!.Nombre" />
+                <input type="hidden" asp-for="@Model.Actual!.Persona_id" />
+                <input type="hidden" asp-for="@Model.Actual!.Vacante_id" />
+                <input type="hidden" asp-for="@Model.Actual!.Elegido" />
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Editar)
             {
                 <div class="containers_vn panel panel-default">
-                    <h3>Editar Postulación</h3>
-
+                    <h3>Postulaciones</h3>
                     <div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">Persona</label>
+                            <div class="col-lg-6">
+                                <input id="nmPersona" class="cts_forms form-control" asp-for="@Model.Actual!.Persona_id" />
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="col-lg-4 control-label">Vacante</label>
                             <div class="col-lg-6">
                                 <input id="nmVacante" class="cts_forms form-control" asp-for="@Model.Actual!.Vacante_id" />
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">Persona</label>
-                            <div class="col-lg-6">
-                                <input id="nmPersona" class="cts_forms form-control" asp-for="@Model.Actual!.Persona_id" />
-                            </div>
+                        <div class="col-lg-6">
+                            <label class="col-lg-4 control-label">Elegido</label>
+                            <br />
+                            <input id="nmElegido"
+                                   type="checkbox"
+                                   asp-for="@Model.Actual!.Elegido" />
                         </div>
                     </div>
                 </div>
@@ -54,7 +61,7 @@
             @if (ViewData.ContainsKey("Mensaje"))
             {
                 <input type="hidden" asp-for="@Model.Accion" />
-                @await Html.PartialAsync("../Emergentes/Mensajes.cshtml");
+                @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
             }
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
@@ -63,8 +70,9 @@
                     <div class='pp_del_inner'>
                         <div style='width:95%'>
                             <h2 align="left">Mensaje</h2>
-                            <h4 align="left">¿Desea borrar la entidad?</h4>
-                            <h6 align="left">ID: @Model.Actual!.Id</h6>
+                            <h4 align="left">Desea borrar la entidad?</h4>
+                            <h6 align="left">@Model.Actual!.Id</h6>
+                            <br />
                             <br />
                             <input type="submit" value="Borrar" asp-page-handler="BtBorrar" class="btn btn-secondary" />
                             <input type="submit" value="Cerrar" asp-page-handler="BtCancelar" class="btn btn-secondary" />
@@ -75,43 +83,32 @@
 
             @if (Model.Accion == lib_utilidades.Enumerables.Ventanas.Listas || Model.Accion == lib_utilidades.Enumerables.Ventanas.Borrar)
             {
-                <input id="flNombre" class="cts_forms form-control" asp-for="@Model.Filtro!._Personas!.Cedula" placeholder="Persona" />
+                <input id="flCedula" class="cts_forms form-control" asp-for="@Model.Filtro!._Persona!.Cedula" placeholder="Cedula" />
                 <br />
 
                 <div class="containers_vn panel panel-default">
                     <table class="tb_data table table-striped table-bordered table-hover">
                         <tr>
-                            <th>Cargos</th>
+                            <th>Vacante</th>
                             <th>Persona</th>
-                            <th>Disponibilidad</th>
-                            <th>Acciones</th>
+                            <th>Elegido</th>
                         </tr>
-                        
+                        @if (Model != null && Model.Lista != null)
 
-                    @if (Model != null && Model.Lista != null)
+                        {
+                            @foreach (var elemento in Model.Lista)
                             {
-
-                                Model.Lista = Model.Lista ?? new List<lib_entidades.Modelos.Postulaciones>();
-                                @foreach (var elemento in Model.Lista)
-
-                                {
-                                    <tr>
-                                        <td>
-                                            @elemento._Vacantes!._Cargo!.Nombre
-                                        </td>
-                                        <td>
-                                            @elemento._Personas!.Cedula
-                                        </td>
-                                        <td>
-                                            @elemento._Vacantes!.Disponibilidad
-                                        </td>
-                                        <td>
-                                            <input type="submit" value="Modificar" asp-page-handler="BtModificar" class="btn btn-secondary" asp-route-data="@elemento.Id" />
-                                            <input type="submit" value="Borrar" asp-page-handler="BtBorrarVal" class="btn btn-secondary" asp-route-data="@elemento.Id" />
-                                        </td>
-                                    </tr>
-                                }
+                                <tr>
+                                    <td>@elemento._Vacante!.Id</td>
+                                    <td>@elemento._Persona!.Nombre</td>
+                                    <td>@elemento.Elegido</td>
+                                    <td>
+                                        <input type="submit" value="Modificar" asp-page-handler="BtModificar" class="btn btn-secondary" asp-route-data="@elemento.Id" />
+                                        <input type="submit" value="Borrar" asp-page-handler="BtBorrarVal" class="btn btn-secondary" asp-route-data="@elemento.Id" />
+                                    </td>
+                                </tr>
                             }
+                        }
                     </table>
                 </div>
             }

@@ -80,8 +80,8 @@
       <FileName>Modelos\Postulaciones.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="_Personas" />
-      <Property Name="_Vacantes" />
+      <Property Name="_Persona" />
+      <Property Name="_Vacante" />
     </ShowAsAssociation>
   </Class>
   <Class Name="lib_entidades.Modelos.Vacantes">

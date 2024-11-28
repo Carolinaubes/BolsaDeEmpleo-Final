@@ -87,8 +87,8 @@ namespace lib_repositorios
         public virtual List<Postulaciones> Buscar(Expression<Func<Postulaciones, bool>> condiciones)
         {
             return this.Set<Postulaciones>()
-                .Include(x => x._Vacantes)
-                .Include(x => x._Personas)
+                .Include(x => x._Vacante)
+                .Include(x => x._Persona)
                 .Where(condiciones)
                 .Take(tamaño)
                 .ToList();
