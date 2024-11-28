@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj": {}
+    "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj": {}
   },
   "projects": {
-    "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj": {
+    "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
+        "projectUniqueName": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
         "projectName": "asp_servicios",
-        "projectPath": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
-        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\obj\\",
+        "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
+        "packagesPath": "C:\\Users\\erian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\asp_servicios\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,17 +33,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj"
+              "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj": {
+                "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj"
               },
-              "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
+              "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+                "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
               },
-              "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj"
+              "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
+                "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj"
               },
-              "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj"
+              "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
+                "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj"
               }
             }
           }
@@ -87,17 +91,21 @@
         }
       }
     },
-    "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj": {
+    "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
+        "projectUniqueName": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
         "projectName": "lib_aplicaciones",
-        "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
-        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\obj\\",
+        "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj",
+        "packagesPath": "C:\\Users\\erian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_aplicaciones\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -112,14 +120,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
+              "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+                "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
               },
-              "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj"
+              "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
+                "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj"
               },
-              "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj"
+              "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
+                "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj"
               }
             }
           }
@@ -158,17 +166,21 @@
         }
       }
     },
-    "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+    "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+        "projectUniqueName": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
         "projectName": "lib_entidades",
-        "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
-        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\obj\\",
+        "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj",
+        "packagesPath": "C:\\Users\\erian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\erian\\Source\\Repos\\BolsaDeEmpleo-Final\\lib_entidades\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -219,17 +231,21 @@
         }
       }
     },
-    "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
+    "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj",
+        "projectUniqueName": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj",
         "projectName": "lib_repositorios",
-        "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj",
-        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\obj\\",
+        "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj",
+        "packagesPath": "C:\\Users\\erian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -244,8 +260,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
-                "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
+              "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+                "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
               }
             }
           }
@@ -290,17 +306,21 @@
         }
       }
     },
-    "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
+    "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj",
+        "projectUniqueName": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj",
         "projectName": "lib_utilidades",
-        "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj",
-        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-        "outputPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\obj\\",
+        "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj",
+        "packagesPath": "C:\\Users\\erian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

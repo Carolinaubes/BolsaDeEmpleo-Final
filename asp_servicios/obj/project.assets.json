@@ -3254,19 +3254,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Janus\\.nuget\\packages\\": {}
+    "C:\\Users\\erian\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
+      "projectUniqueName": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
       "projectName": "asp_servicios",
-      "projectPath": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
-      "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-      "outputPath": "D:\\BolsaDeEmpleo-Final\\asp_servicios\\obj\\",
+      "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\asp_servicios\\asp_servicios.csproj",
+      "packagesPath": "C:\\Users\\erian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\asp_servicios\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\erian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3281,17 +3286,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj": {
-              "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj"
+            "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj": {
+              "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_aplicaciones\\lib_aplicaciones.csproj"
             },
-            "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
-              "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
+            "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj": {
+              "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_entidades\\lib_entidades.csproj"
             },
-            "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
-              "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj"
+            "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj": {
+              "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_repositorios\\lib_repositorios.csproj"
             },
-            "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
-              "projectPath": "D:\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj"
+            "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj": {
+              "projectPath": "C:\\Users\\erian\\source\\repos\\BolsaDeEmpleo-Final\\lib_utilidades\\lib_utilidades.csproj"
             }
           }
         }
@@ -3338,5 +3343,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

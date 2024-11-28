@@ -64,8 +64,9 @@
   box-sizing: border-box;
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
-  :root {
+    : root {
     scroll-behavior: smooth;
   }
 }
@@ -189,9 +190,11 @@ dt {
   font-weight: 700;
 }
 
+
+
 dd {
-  margin-bottom: 0.5rem;
-  margin-left: 0;
+    margin-bottom: 0.5rem;
+    margin-left: 0;
 }
 
 blockquote {
